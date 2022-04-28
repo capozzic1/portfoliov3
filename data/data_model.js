@@ -1,20 +1,11 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Header from '../components/header'
-import Layout from '../components/layout';
-import Hero from '../components/hero'
-import Card from '../components/card'
-
-export default function Home() {
-  const data = {
+const data = {
     introHeader: {
         header: "Hello, I'm Chris",
         heroList: [
             "User Interface Developer",
             "Lover of Javascript",
             "Lover of coffee"
-        ],
-        heroIcon: "/hero-code.png"
+        ]
     },
     projectCard: {
         header: "Want to see some projects?",
@@ -54,12 +45,4 @@ export default function Home() {
     footer: {
         icons: null
     }
-}
-  return (
-    <Layout>
-        <Header/>
-        <Hero introHeader={data.introHeader}/>
-        <Card projectCard={data.projectCard} />
-    </Layout>
-  )
 }
