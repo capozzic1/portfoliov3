@@ -1,0 +1,24 @@
+.headerH2 {
+  color: #B1D0ED;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h2Container {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.fullWidthHeader {
+  width: 100%;
+}
+
+.sixtyWidthHeader {
+  width: 60%;
+}

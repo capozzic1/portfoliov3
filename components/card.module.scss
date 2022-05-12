@@ -1,3 +1,13 @@
 .cardContainer { 
-    background: #3E518C;
+    padding: 30px 0px;
+    z-index: 1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(2px 0px 10px black);
 }
+
+
+
