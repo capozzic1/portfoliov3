@@ -8,6 +8,7 @@ import Button from '../components/button';
 import { Col } from 'react-bootstrap';
 import CardContent from '../components/card-content';
 import Footer from '../components/footer';
+import Carousel from '../components/carousel';
 
 export default function Home() {
   const data = {
@@ -58,7 +59,9 @@ export default function Home() {
         ]
     },
     footerContent: {
-        header: "Around the web:"
+        header: "Around the web:",
+        header2: "About this page:",
+        description: "Made with React and Next.js"
     }
 }
   return (
@@ -69,6 +72,13 @@ export default function Home() {
         <Card cardData={data.projectCard} bgColor="#3E518C">
             <Button ctaText={data.projectCard.ctaText} />
         </Card>
+        </div>
+        <div>
+            <Carousel>
+                <img src="/checkingoverview.png" alt="slide 1" />
+                <img src="/savingsoverview.png" alt="slide 2" />
+                <img src="/cdoverview.png" alt="slide 3" />
+            </Carousel>
         </div>
         <div className="developerCard">
         <Card cardData={data.developerCard} bgColor="#12173F">

@@ -1,4 +1,42 @@
-.footerContainer {
+%padding-fontweight{
+    padding-top:20px;
+    font-weight: 600;
+}
+
+
+.footerContainer { 
     background: #12173F;
     color: #B1D0ED;
+    margin-top: 30px;
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        @extend %padding-fontweight
+    }
+
+    svg {
+       height: 50px;
+       width: 40px;
+    }
+
+    div {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.aboutContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        @extend %padding-fontweight
+    }
 }

@@ -1,0 +1,16 @@
+.thumbnail {
+    width: 100px;
+    height: 100%;
+
+    img {
+    width: 100%;
+    height: auto;
+    }
+}
+
+.thumbnailContainer {
+      display: flex;
+      justify-content: space-between;
+      width: 42%;
+      margin-top: 25px;
+  }
