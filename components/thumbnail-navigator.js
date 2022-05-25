@@ -1,11 +1,10 @@
 import React from 'react';
 import styles from './thumbnail.module.scss';
 
-export default function ThumbnailNavigator({ children }) {
-    const test = React.Children.map(children, (child) => {
-        return <div className={styles.thumbnail}>{child}</div>
-    })
-    console.log(test)
+export default function ThumbnailNavigator(props) {
+    const test = React.Children.map(props.children, (child, index) => {
+               return <div className={styles.thumbnail} onClick={ () => { props.setSlide(index) }}>{child}</div> 
+            })
     return (
         <div className={styles.thumbnailContainer}>
             {test}

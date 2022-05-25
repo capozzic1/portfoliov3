@@ -58,6 +58,20 @@ export default function Home() {
             }
         ]
     },
+    carouselContent: [
+        {
+            header: "Citi Checking Overview",
+            url: "https://online.citi.com/US/ag/banking/checking-account"
+        },
+        {
+            header: "Citi Savings Overview",
+            url: "https://online.citi.com/US/ag/banking/savings-account",
+        },
+        {
+            header: "Citi CD Overview",
+            url: "https://online.citi.com/US/ag/banking/cd-account"
+        }
+    ],
     footerContent: {
         header: "Around the web:",
         header2: "About this page:",
@@ -74,7 +88,7 @@ export default function Home() {
         </Card>
         </div>
         <div>
-            <Carousel>
+            <Carousel headerData={data.carouselContent}>
                 <img src="/checkingoverview.png" alt="slide 1" />
                 <img src="/savingsoverview.png" alt="slide 2" />
                 <img src="/cdoverview.png" alt="slide 3" />
