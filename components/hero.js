@@ -12,10 +12,14 @@ export default function Hero(props) {
     return (
         <Row>
             <Col className={styles.heroContainer}>
-                <ImageHeader  fullWidthHeader={true} imgSrc={props.introHeader.heroIcon} header={header}/>
+            <Image src={props.introHeader.heroIcon} alt ="portfolio" width={100} height={100}/>
+                {/* <ImageHeader  fullWidthHeader={true} imgSrc={props.introHeader.heroIcon} header={header}/> */}
+                <div>
+                <h2 className={styles.introHeader}>{props.introHeader.header}</h2>
                 <ul className={styles.heroList}>
                     {listItems}
                 </ul>
+                </div>
             </Col>
         </Row>
     )

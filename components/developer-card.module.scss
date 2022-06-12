@@ -1,0 +1,55 @@
+@media screen and (min-width: 1024px) {
+    .descriptionContainer {
+        margin: 0 auto;
+    }
+
+    .container, .container div:nth-child(1) {
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
+
+    .cardContainer {
+        border-radius: none;
+    }
+
+    .container {
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+.iconContainer {
+    div {
+        font-weight: 600;
+    }
+}
+
+.container {
+    margin-top: 15px;
+    color: #B1D0ED;
+}
+
+
+.description {
+    line-height: 35px;
+}
+
+.container {
+    p, h2, ul {
+        font-size: 22px;
+    }
+}
+
+.languageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    ul {
+        list-style: none;
+        padding-left: 0px;
+    }
+}
+

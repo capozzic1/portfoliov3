@@ -9,12 +9,16 @@ export default function CardContent(props) {
         <li key={index}><span>{obj.name}</span></li>
     )
     return (
-        <Col xs={10} className={styles.container}>
-        <p className={styles.description}>{props.contentData.description}</p>
-        <h2>{props.contentData.toolDescription}</h2>
-        <div className={styles.languageContainer}>
-        <ul>{listItems}</ul>
-        </div>
+        <Col xs={{ span: 10, offset: 1}} lg={{ span:8, offset: 0}} className={styles.container}>
+            <Col xs={{ span: 10, offset: 1}} lg={{ span:2, offset: 0}}>
+            <p className={styles.description}>{props.contentData.description}</p>
+            </Col>
+            <Col lg={{ span:2, offset: 0}}>
+            <h2>{props.contentData.toolDescription}</h2>
+            <div className={styles.languageContainer}>
+            <ul>{listItems}</ul>
+            </div>
+            </Col>
         </Col>
     )
 }

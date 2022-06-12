@@ -4,13 +4,13 @@
 
     img {
     width: 100%;
-    height: auto;
+    height: 50px;
     }
 }
 
 .thumbnailContainer {
       display: flex;
-      justify-content: space-between;
-      width: 42%;
       margin-top: 25px;
+      justify-content: center;
+      gap: 20px;
   }

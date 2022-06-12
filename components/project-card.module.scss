@@ -1,0 +1,28 @@
+.btnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+// .projectContainer {
+//     display: flex;
+//     align-items: center;
+
+//     img {
+//         display: none !important;
+//     }
+// }
+
+.projectRow {
+    margin-top: -60px;
+}
+
+@media screen and (min-width: 1024px) {
+    .projectContainer {
+    display: flex;
+    align-items: center;
+
+    img {
+        display: none !important;
+    }
+}
+}

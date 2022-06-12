@@ -7,13 +7,11 @@ export default function ImageHeader(props) {
 
 return (
     <Row>
-      <Col>
-        <div className={styles.headerContainer}>
+      <Col className={styles.headerContainer}>
         <Image src={props.imgSrc} alt ="portfolio" width={100} height={100}/>
-        <div className={props.fullWidthHeader ? `${styles.h2Container} ${styles.fullWidthHeader}` : `${styles.h2Container} ${styles.sixtyWidthHeader}` }>
+        <Col className={styles.h2Container}>
             <h2 className={styles.headerH2}>{props.header}</h2>
-        </div>
-        </div>
+        </Col>
       </Col>
     </Row>
     )

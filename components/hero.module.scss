@@ -18,6 +18,35 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .heroContainer {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        height: 375px;
+        padding-top: 0px;
+        
+        .headerH2  {
+                display: none;
+           
+        }
+
+        .introHeader {
+            text-align: left;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.introHeader {
+    text-align: center;
+    padding-top: 10px;
+    color: #B1D0ED;
+    font-size: 28px;
+    font-weight: 600;
+}
+
 .heroList {
     list-style: none;
 }
@@ -26,3 +55,8 @@
     margin-top: 52px;
 }
 
+.headerH2 { 
+    color: #B1D0ED;
+    font-size: 28px;
+    font-weight: 600;
+}

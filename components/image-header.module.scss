@@ -10,6 +10,13 @@
     align-items: center;
 }
 
+@media screen and (max-width: 425px) {
+  .h2Container {
+    width: 200px;
+  }
+}
+
+
 .h2Container {
     text-align: center;
     padding: 10px 0px;

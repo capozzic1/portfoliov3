@@ -9,11 +9,13 @@ import { Col } from 'react-bootstrap';
 import CardContent from '../components/card-content';
 import Footer from '../components/footer';
 import Carousel from '../components/carousel';
+import ProjectCard from '../components/project-card';
+import DeveloperCard from '../components/developer-card';
 
 export default function Home() {
   const data = {
     introHeader: {
-        header: "Hello, I'm Chris",
+        header: "Hello, I'm Chris.",
         heroList: [
             "User Interface Developer",
             "Lover of Javascript",
@@ -82,11 +84,9 @@ export default function Home() {
     <Layout>
         <Header/>
         <Hero introHeader={data.introHeader}/>  
-        <div className="projectCard">
-        <Card cardData={data.projectCard} bgColor="#3E518C">
-            <Button ctaText={data.projectCard.ctaText} />
-        </Card>
-        </div>
+     
+        <ProjectCard cardData={data.projectCard}/>
+
         <div>
             <Carousel headerData={data.carouselContent}>
                 <img src="/checkingoverview.png" alt="slide 1" />
@@ -95,9 +95,7 @@ export default function Home() {
             </Carousel>
         </div>
         <div className="developerCard">
-        <Card cardData={data.developerCard} bgColor="#12173F">
-           <CardContent contentData={data.developerCard}></CardContent>
-        </Card>
+    <DeveloperCard developerCardData={data.developerCard}/>
         </div>
         <Footer footerContent={data.footerContent}/>
     </Layout>
