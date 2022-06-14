@@ -1,0 +1,29 @@
+.photographContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15px;
+    background: white;
+    margin-top: 15px;
+
+    h2 {
+        font-weight: 600;
+        color: #12173F;
+    }
+}
+
+.imageContainer, .photographContainer {
+    border: 2px solid #12173F;
+
+}
+
+.imageContainer {
+    width: 90%;
+}
+
+.headerContainer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}

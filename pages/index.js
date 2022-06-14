@@ -74,17 +74,11 @@ export default function Home() {
             url: "https://online.citi.com/US/ag/banking/cd-account"
         }
     ],
-    footerContent: {
-        header: "Around the web:",
-        header2: "About this page:",
-        description: "Made with React and Next.js"
-    }
+
 }
   return (
     <Layout>
-        <Header/>
         <Hero introHeader={data.introHeader}/>  
-     
         <ProjectCard cardData={data.projectCard}/>
 
         <div>
@@ -97,7 +91,7 @@ export default function Home() {
         <div className="developerCard">
     <DeveloperCard developerCardData={data.developerCard}/>
         </div>
-        <Footer footerContent={data.footerContent}/>
+      
     </Layout>
   )
 }
