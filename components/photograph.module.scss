@@ -10,6 +10,14 @@
     h2 {
         font-weight: 600;
         color: #12173F;
+        
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .photographContainer h2 {
+        font-size: 20px;
+        text-align: center;
     }
 }
 

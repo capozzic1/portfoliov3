@@ -2,3 +2,17 @@
     display: flex;
     align-items: center;
 }
+
+.homeButton {
+    font-family: 'Audiowide', cursive;
+    color: #12173F;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.projectsButton {
+    color: #12173F;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+}

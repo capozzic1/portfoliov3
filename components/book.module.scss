@@ -1,0 +1,49 @@
+.leftSide, .rightSide {
+    border: 5px solid #101741;
+    background: white;
+    height: 500px;
+}
+
+.leftSide {
+    border-right: 0px;
+
+
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .container {
+        margin-top: 20px;
+    }
+    .leftSide {
+        .photo {
+            transform: rotate(-20deg);
+        }
+
+        .photo:first-of-type {
+            margin-bottom: 35px;
+        }
+
+    }
+
+    .rightSide {
+        .photo {
+            transform: rotate(20deg);
+        }
+
+        .photo:first-of-type {
+            margin-bottom: 35px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .leftSide, .rightSide {
+        background: none;
+        border: none;
+        height: 100%;
+    }
+}
