@@ -16,3 +16,23 @@
     font-size: 24px;
     font-weight: 600;
 }
+
+.projectsButtonContainer {
+    width: 100%;
+    text-align: right;
+}
+
+.homeButtonContainer {
+    display: flex;
+    align-items: center;
+}
+
+.headerRow {
+    height: 75px;
+}
+
+@media screen and (max-width: 425px) {
+    .homeButton {
+        font-size: 20px;
+    }
+}

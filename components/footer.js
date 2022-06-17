@@ -8,16 +8,16 @@ export default function Footer(props) {
         <Row className={styles.footerContainer}>
             {/* <Row className={styles.iconContainer}> */}
             <h2>{props.footerContent.header}</h2>
-            <Col xs={12} lg={{ span: 2, offset: 5}}>
+            <Col xs={12} lg={{ span: 2, offset: 5}} md={{ span: 6, offset: 3}}>
                 <Row>
                 <Col xs={{ span: 2, offset: 3}} lg={1} xl={{ span:3, offset: 2}}>
-                <FaGithub />
+                <a href="https://github.com/capozzic1"><FaGithub /></a>
                 </Col>
                 <Col xs={2} lg={1} xl={3}>
-                <FaLinkedin />
+                <a href="https://www.linkedin.com/in/ccapozzi1/"><FaLinkedin /></a>
                 </Col>
                 <Col xs={2} lg={1} xl={3}>
-                <FaStackExchange />
+                <a href="https://stackoverflow.com/users/6294039/dream-cap"><FaStackExchange /></a>
                 </Col>
                 </Row>
             </Col>

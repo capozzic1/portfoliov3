@@ -9,8 +9,8 @@ export default function DeveloperCard(props) {
     //col 6 col 6 
     //divs stacked 
     //output will be 2 cols full of divs 
-    const firstCol = props.developerCardData.icons.slice(0,3).map(icon => <div>{icon.name}</div>)
-    const secondCol = props.developerCardData.icons.slice(3).map(icon => <div>{icon.name}</div>)
+    const firstCol = props.developerCardData.icons.slice(0,3).map((icon, id) => <div key={id}>{icon.name}</div>)
+    const secondCol = props.developerCardData.icons.slice(3).map((icon, id)=> <div key={id}>{icon.name}</div>)
 // )
     return (
         <Row className={`${styles.container}`}>

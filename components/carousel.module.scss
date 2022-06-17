@@ -1,8 +1,8 @@
 .slideContainer {
-    width: 670px;
+    // width: 670px;
 
     img {
-      max-width: 678px;
+      // max-width: 678px;
       width: 124%;
       height: 300px;
       margin-left: -12%;
@@ -23,6 +23,16 @@
 .leftBlock, .rightBlock {
   width: 7% !important;
 }
+
+.carouselContainer {  
+  width: 824px;
+}
+}
+
+@media screen and (min-width: 425px) and (max-width: 1024px) {
+  .carouselContainer {
+    width: 100%;
+  }
 }
 
 .leftBlock, .rightBlock {
@@ -58,7 +68,6 @@
 .carouselContainer {
   display: flex;
   // flex-wrap: wrap; 
-  width: 824px;
   justify-content: center;
   user-select: none;
   

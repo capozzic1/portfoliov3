@@ -5,6 +5,7 @@ import styles from './hero.module.scss'
 import ImageHeader from './image-header';
 
 export default function Hero(props) {
+    console.log(props)
     const header = props.introHeader.header;
     const listItems = props.introHeader.heroList.map((item, idx) => {
        return <li key={idx}>{item}</li>

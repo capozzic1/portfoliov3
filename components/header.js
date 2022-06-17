@@ -6,12 +6,14 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <Row className="justify-content-between">
-        <Col xs={2}>
+        <Row className={styles.headerRow}>
+        <Col className={styles.homeButtonContainer} xs={6} xl={{ span: 3, offset: 0}}>
         <Link href="/"><a className={styles.homeButton}>Lucid Web Dream</a></Link>
         </Col>
-        <Col className={styles.navbtnContainer} xs={2}>
+        <Col className={styles.navbtnContainer} xs={{ span: 4, offset: 1}} xl={{ span: 5, offset: 3}}>
+         <div  className={styles.projectsButtonContainer}>
         <Link href="/projects"><a className={styles.projectsButton}>Projects</a></Link>
+         </div>
         </Col>
         </Row>
     )
