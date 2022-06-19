@@ -38,18 +38,14 @@ const homePageContentData = homePageContent.homePageContent
 
   return (
     <Layout>
-      
-
-      {/* <div dangerouslySetInnerHTML={{__html:homePageContent.carouselSlides }}></div> */}
         <Hero introHeader={homePageContentData.introHeader}/>  
         <ProjectCard cardData={homePageContentData.projectCard}/>
 
         <div>
-            <Carousel children={homePageContent.carouselSlides} headerData={homePageContentData.carouselContent}>
-          
-                {/* <img src="/checkingoverview.png" alt="slide 1" />
+            <Carousel headerData={homePageContentData.carouselContent}>
+                <img src="/checkingoverview.png" alt="slide 1" />
                 <img src="/savingsoverview.png" alt="slide 2" />
-                <img src="/cdoverview.png" alt="slide 3" /> */}
+                <img src="/cdoverview.png" alt="slide 3" />
             </Carousel>
         </div>
         <div className="developerCard">

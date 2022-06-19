@@ -2,41 +2,40 @@ import Banner from "../components/Banner";
 import Book from "../components/book";
 import Layout from "../components/layout";
 import Photograph from "../components/photograph";
+import { gql, GraphQLClient } from 'graphql-request';
 
-export default function Projects() {
-    const projectData = [
-        {
-            src: '/cdoverview.png',
-            name: 'Citi CD Overview',
-            url: 'https://online.citi.com/US/ag/banking/cd-account'
-        },
-        {
-            src: '/checkingoverview.png',
-            name: 'Citi Checking Overview',
-            url: 'https://online.citi.com/US/ag/banking/checking-account'
-        },
-        {
-            src: '/savingsoverview.png',
-            name: 'Citi Savings Overview',
-            url: 'https://online.citi.com/US/ag/banking/savings-account'
-        },
-        {
-            src: '/cdpdp.png',
-            name: 'CD Product Detail Page',
-            url: "https://online.citi.com/US/ag/certificates-of-deposit"
+
+const QUERY = gql`
+{
+    projectPageContent(where: {id: "cl4lkg9weyvig0djzl6qbhfs9"}) {
+        projects
+    }
+}
+`
+const graphcms = new GraphQLClient(
+    process.env.GRAPHCMS_API
+)
+
+export async function getStaticProps() {
+    const { projectPageContent } = await graphcms.request(QUERY);
+
+    return {
+        props: {
+            projectPageContent
         }
-    ]
+    }
+}
+
+export default function Projects( { projectPageContent }) {
+    const projectData = projectPageContent.projects;
 
     const firstPage = [projectData[0], projectData[1]].map(project => <Photograph src={project.src} name={project.name} url={project.url}/> )
     const secondPage = [projectData[2], projectData[3]].map(project => <Photograph src={project.src} name={project.name} url={project.url} /> )
-    console.log(secondPage)
-    // const projects = projectData.map(project => <Photograph src={project.src} name={project.name} />)
 
     return (
         <Layout>
             <Banner />
             <Book firstPage={firstPage} secondPage={secondPage}/>
-            {/* {projects} */}
         </Layout>
     )
 }
