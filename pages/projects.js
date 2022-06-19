@@ -1,4 +1,4 @@
-import Banner from "/components/Banner";
+import Banner from "/components/banner";
 import Book from "/components/book";
 import Layout from "/components/layout";
 import Photograph from "/components/photograph";
