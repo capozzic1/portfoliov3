@@ -12,11 +12,12 @@ const QUERY = gql`
     }
 }
 `
-const graphcms = new GraphQLClient(
-    process.env.GRAPHCMS_API
-)
+
 
 export async function getStaticProps() {
+    const graphcms = new GraphQLClient(
+        process.env.GRAPHCMS_API
+    ) 
     const { projectPageContent } = await graphcms.request(QUERY);
 
     return {

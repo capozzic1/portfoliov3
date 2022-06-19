@@ -5,7 +5,7 @@ import ProjectCard from '../components/project-card';
 import DeveloperCard from '../components/developer-card';
 import { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
-import DOMPurify from "dompurify";
+
 
 
 const QUERY = gql`
