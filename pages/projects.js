@@ -1,7 +1,7 @@
-import Banner from "../components/Banner";
-import Book from "../components/book";
-import Layout from "../components/layout";
-import Photograph from "../components/photograph";
+import Banner from "/components/Banner";
+import Book from "/components/book";
+import Layout from "/components/layout";
+import Photograph from "/components/photograph";
 import { gql, GraphQLClient } from 'graphql-request';
 
 

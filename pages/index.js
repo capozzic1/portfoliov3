@@ -1,8 +1,8 @@
-import Layout from '../components/layout';
-import Hero from '../components/hero'
-import Carousel from '../components/carousel';
-import ProjectCard from '../components/project-card';
-import DeveloperCard from '../components/developer-card';
+import Layout from '/components/layout';
+import Hero from '/components/hero'
+import Carousel from '/components/carousel';
+import ProjectCard from '/components/project-card';
+import DeveloperCard from '/components/developer-card';
 import { GraphQLClient } from 'graphql-request';
 import { gql } from 'graphql-request';
 
