@@ -26,6 +26,15 @@ export default function Footer(props) {
            <h2>{props.footerContent.header2}</h2>
            <p>{props.footerContent.description}</p>
            </Col>
+           <Col xs={12}>
+            <h2>Icon attributions</h2>
+               <div className={styles.attributionsContainer}>
+                <ul>
+                    <li><a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by Freepik - Flaticon</a></li>
+                    <li><a href="https://www.flaticon.com/free-icons/web-development" title="web development icons">Web development icons created by surang - Flaticon</a></li>
+                </ul>
+                </div>
+           </Col>
         </Row>
     )
 }
