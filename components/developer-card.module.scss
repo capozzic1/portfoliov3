@@ -3,7 +3,8 @@
         margin: 0 auto;
     }
 
-    .container, .container div:nth-child(1) {
+    .container,
+    .container div:nth-child(1) {
         padding-left: 0px;
         padding-right: 0px;
 
@@ -36,9 +37,122 @@
     line-height: 35px;
 }
 
+.innerRow {
+    display: flex;
+    align-items: flex-start;
+}
+
+.iconCol {
+    display: flex;
+    justify-content: center;
+}
+
+.iconWrap {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.descCol {
+    display: flex;
+    align-items: center;
+}
+
+.toolsCol {
+    color: #B1D0ED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toolsIntro {
+    text-align: left;
+    margin-bottom: 12px;
+    color: #CFE3FF;
+}
+
+.toolsGrid {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.toolsSection {
+    min-width: 120px;
+}
+
+.roboto-800 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.toolsHeading {
+    @extend .roboto-800;
+    font-weight: 800;
+    color: #B1D0ED;
+    margin-bottom: 6px;
+}
+
+.toolsSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toolsSection li {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 6px;
+    color: #B1D0ED;
+}
+
 .container {
-    p, h2, ul {
+    background-color: #12173F;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    margin-top: -25px;
+       padding-bottom:30px;
+               padding-top: 70px;
+
+
+    p,
+    h2,
+    ul {
         font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .innerRow {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .iconWrap {
+        margin-top: 28px;
+    }
+
+    .descCol {
+        text-align: center;
+        justify-content: center;
+        margin-top: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .toolsCol {
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    .toolsIntro {
+        text-align: center;
     }
 }
 
@@ -46,10 +160,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     ul {
         list-style: none;
         padding-left: 0px;
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .container {
+     
+    }
+
+}

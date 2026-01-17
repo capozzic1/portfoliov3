@@ -1,6 +1,7 @@
 .navbtnContainer {
     display: flex;
     align-items: center;
+    justify-content: end;
 }
 
 .homeButton {
@@ -8,6 +9,7 @@
     color: #12173F;
     text-decoration: none;
     font-size: 28px;
+    margin-left: 20px;
 }
 
 .projectsButton {
@@ -18,13 +20,17 @@
 }
 
 .projectsButtonContainer {
-    width: 100%;
-    text-align: right;
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    gap: 10px;
 }
 
 .homeButtonContainer {
     display: flex;
     align-items: center;
+    
 }
 
 .headerRow {

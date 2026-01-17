@@ -7,14 +7,17 @@ import Link from 'next/link'
 export default function Header() {
     return (
         <Row className={styles.headerRow}>
-        <Col className={styles.homeButtonContainer} xs={6} xl={{ span: 3, offset: 0}}>
-        <Link href="/"><a className={styles.homeButton}>Lucid Web Dream</a></Link>
-        </Col>
-        <Col className={styles.navbtnContainer} xs={{ span: 4, offset: 1}} xl={{ span: 5, offset: 3}}>
-         <div  className={styles.projectsButtonContainer}>
-        <Link href="/projects"><a className={styles.projectsButton}>Projects</a></Link>
-         </div>
-        </Col>
+            <Col className={styles.homeButtonContainer} xs={6} xl={{ span: 3 }}>
+                <Link href="/"><a className={styles.homeButton}>Lucid Web Dream</a></Link>
+            </Col>
+            <Col className={styles.navbtnContainer} xl={{ span: 7, offset: 2  }} xs={{ span: 4, offset: 1 }} >
+                <div className={styles.projectsButtonContainer}>
+                    <Link href=""><a className={styles.projectsButton}>Experience</a></Link>
+                    <Link href="/projects"><a className={styles.projectsButton}>Projects</a></Link>
+                    <Link href=""><a className={styles.projectsButton}>Blog</a></Link>
+
+                </div>
+            </Col>
         </Row>
     )
 }

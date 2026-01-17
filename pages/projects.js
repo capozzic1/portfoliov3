@@ -2,23 +2,10 @@ import Banner from "/components/banner";
 import Book from "/components/book";
 import Layout from "/components/layout";
 import Photograph from "/components/photograph";
-import { gql, GraphQLClient } from 'graphql-request';
-
-
-const QUERY = gql`
-{
-    projectPageContent(where: {id: "cl4lkg9weyvig0djzl6qbhfs9"}) {
-        projects
-    }
-}
-`
-
+import projectsData from '../data/projects.json';
 
 export async function getStaticProps() {
-    const graphcms = new GraphQLClient(
-        process.env.GRAPHCMS_API
-    ) 
-    const { projectPageContent } = await graphcms.request(QUERY);
+    const projectPageContent = projectsData.projectPageContent;
 
     return {
         props: {

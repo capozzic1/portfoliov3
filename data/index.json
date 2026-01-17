@@ -1,0 +1,78 @@
+{
+   
+        "homePageContent": {
+            "homePageContent": {
+                "introHeader": {
+                    "header": "Hello, I'm Chris.",
+                    "heroIcon": "/hero-code.png",
+                    "heroList": [
+                        "Full Stack Developer.",
+                        "Frontend-Driven, Backend-Capable.",
+                        "AWS Certified."
+                    ]
+                },
+                "projectCard": {
+                    "header": "Want to see some projects?",
+                    "imgSrc": "/portfolio.png",
+                    "ctaText": "Lets go!"
+                },
+                "workExperience": {
+                    "header": "My work experience",
+                    "items": [
+                        { "company": "TCS/Citi", "title": "UI Developer", "years": "2018-2022" },
+                        { "company": "Randstad (Bank of America)", "title": "UI Developer", "years": "2022-2023" },
+                        { "company": "Wells Fargo", "title": "Senior Software Engineer (UI)", "years": "2023-2025" }
+                    ]
+                },
+                "developerCard": {
+                    "icons": [
+                        {
+                            "name": "Javascript"
+                        },
+                        {
+                            "name": "Angular"
+                        },
+                        {
+                            "name": "Sass"
+                        },
+                        {
+                            "name": "CSS"
+                        },
+                        {
+                            "name": "ReactJS"
+                        },
+                        {
+                            "name": "HTML"
+                        }
+                    ],
+                    "header": "Full Stack Developer",
+                    "imgSrc": "/coding.png",
+                    "description": "I take a design or prototype and make it become real in the browser using the languages of the web.",
+                    "toolDescription": "Languages and tools I work with:",
+                    "frontend": ["Javascript","Angular","React","HTML","CSS"],
+                    "backend": ["Java","Spring","MySQL","PostgreSQL","MongoDB","Docker","AWS"],
+                    "ai": ["ChatGPT","Github Copilot"]
+                },
+                "headerContent": {
+                    "homeButton": "Lucid Web Dream",
+                    "projectButton": "Projects"
+                },
+                "carouselContent": [
+                    {
+                        "url": "https://online.citi.com/US/ag/banking/checking-account",
+                        "header": "Citi Checking Overview"
+                    },
+                    {
+                        "url": "https://online.citi.com/US/ag/banking/savings-account",
+                        "header": "Citi Savings Overview"
+                    },
+                    {
+                        "url": "https://online.citi.com/US/ag/banking/cd-account",
+                        "header": "Citi CD Overview"
+                    }
+                ]
+            },
+            "carouselSlides": "<img src=\"/checkingoverview.png\" alt=\"slide 1\" />\n<img src=\"/savingsoverview.png\" alt=\"slide 2\" />\n<img src=\"/cdoverview.png\" alt=\"slide 3\" />"
+        }
+
+}

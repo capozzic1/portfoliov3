@@ -11,15 +11,25 @@
 //         display: none !important;
 //     }
 // }
+//  {/* <Card cardData={props.cardData} bgColor="#3E518C" border={borderColor}>  */}
+//         <div className={styles.cardContent}>
 
-.projectCard { 
-    margin-top: 40px;
+.cardContent {
+    background-color: #3E518C;
+    border: 3px solid #7A8DC7;
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+
+.projectRow {
+    margin-top: -60px;
 }
 
 @media screen and (min-width: 1024px) {
     .projectContainer {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         img {
             display: none !important;
@@ -27,17 +37,18 @@
     }
 }
 
-.cardContent {
-    background-color: #3E518C;
-    border: 3px solid #7A8DC7;
-    padding: 30px;
-}
+
 
 .itemsHeader {
     text-align: center;
-    color: #DCE6FF;
+    color: #B1D0ED;
     margin-bottom: 20px;
     font-size: 30px;
+    font-weight: 800;
+}
+
+.itemsWrapper {
+    color: #B1D0ED;
 }
 
 .itemsGrid {
@@ -52,11 +63,12 @@
     width: 208px;
     height: 158px;
     max-width: 100%;
-    border: 4px solid rgba(255, 255, 255, 0.25);
+
     padding: 22px;
     background: #0F1730;
-    color: #EAF0FF;
+    color: #B1D0ED;
     box-sizing: border-box;
+    border: 3px solid #7A8DC7;
 }
 
 .itemCompany {

@@ -1,0 +1,28 @@
+{
+        "projectPageContent": {
+            "projects": [
+                {
+                    "src": "/cdoverview.png",
+                    "url": "https://online.citi.com/US/ag/banking/cd-account",
+                    "name": "Citi CD Overview"
+                },
+                {
+                    "src": "/checkingoverview.png",
+                    "url": "https://online.citi.com/US/ag/banking/checking-account",
+                    "name": "Citi Checking Overview"
+                },
+                {
+                    "src": "/savingsoverview.png",
+                    "url": "https://online.citi.com/US/ag/banking/savings-account",
+                    "name": "Citi Savings Overview"
+                },
+                {
+                    "src": "/cdpdp.png",
+                    "url": "https://online.citi.com/US/ag/certificates-of-deposit",
+                    "name": "CD Product Detail Page"
+                }
+            ]
+        }
+    
+
+}
