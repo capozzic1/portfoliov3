@@ -61,7 +61,7 @@
     color: #B1D0ED;
     display: flex;
     flex-direction: column;
-    align-items: center;
+        align-items: start;
 }
 
 .toolsIntro {
@@ -109,6 +109,60 @@
     color: #B1D0ED;
 }
 
+@media screen and (max-width: 575px) {
+    .toolsGrid {
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+    }
+
+    .toolsSection {
+        min-width: auto;
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 12px;
+    }
+
+    .toolsSection ul {
+        padding-left: 0;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .toolsSection li {
+        text-align: center;
+    }
+
+    .toolsIntro {
+        text-align: center;
+    }
+}
+
+/* Stronger centering for small mobile to override other rules */
+@media screen and (max-width: 575px) {
+    .toolsCol {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+    }
+
+    .toolsGrid {
+        width: 100%;
+        justify-content: center !important;
+    }
+
+    .toolsSection ul {
+        padding-left: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+}
+
 .container {
     background-color: #12173F;
     min-height: 350px;
@@ -148,7 +202,7 @@
 
     .toolsCol {
         margin-top: 12px;
-        text-align: center;
+   
     }
 
     .toolsIntro {

@@ -1,8 +1,12 @@
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     background: #B1D0ED !important;
 }
 
 * {
+    box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
 }
 

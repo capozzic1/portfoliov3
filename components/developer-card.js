@@ -21,12 +21,12 @@ export default function DeveloperCard(props) {
                             </Col>
 
                             {/* Middle: Description */}
-                            <Col xl={{ span: 4 }} lg={{ span: 4 }} md={{ span: 12 }} className={styles.descCol}>
+                            <Col xl={{ span: 4 }} lg={{ span: 4 }} md={{ span: 6 }} className={styles.descCol}>
                                 <p className={styles.description}>{data.description}</p>
                             </Col>
 
                             {/* Right: Tools lists */}
-                            <Col xl={{ span: 3 }} lg={{ span: 5 }} md={{ span: 12 }} className={styles.toolsCol}>
+                            <Col xl={{ span: 4 }} lg={{ span: 5 }} md={{ span: 6 }} className={styles.toolsCol}>
                                 <h3 className={styles.toolsIntro}>{data.toolDescription}</h3>
                                 <div className={styles.toolsGrid}>
                                     <div className={styles.toolsSection}>

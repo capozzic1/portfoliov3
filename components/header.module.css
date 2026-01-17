@@ -1,6 +1,7 @@
 .navbtnContainer {
     display: flex;
     align-items: center;
+  
     justify-content: end;
 }
 
@@ -34,11 +35,24 @@
 }
 
 .headerRow {
-    height: 75px;
+        min-height: 75px;
 }
 
 @media screen and (max-width: 425px) {
     .homeButton {
         font-size: 20px;
     }
+    .projectsButtonContainer {
+        flex-direction: column;
+        
+    }
+.navbtnContainer {
+    justify-content: start;
 }
+
+.homeButtonContainer {
+    justify-content: center;
+}
+
+}
+
