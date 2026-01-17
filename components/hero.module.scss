@@ -16,9 +16,50 @@
         font-style: italic;
         font-size: 28px;
     }
+
+    /** animation */
+    position: relative;
+    background: linear-gradient(120deg,
+        #0f172a,
+        #1e293b,
+        #0b3c5d,
+        #1e293b);
+    background-size: 400% 400%;
+    animation: gradientDrift 2s ease infinite;
+    overflow: hidden;
 }
 
-/* stars animation removed */
+@keyframes gradientDrift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.orb {
+
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 1;
+  animation: float 5s ease-in-out infinite;
+}
+
+.orb1 {
+  background: #3b82f6;
+  top: -100px;
+  left: -100px;
+}
+
+.orb2 {
+  background: #38bdf8;
+  bottom: -100px;
+  right: -100px;
+  animation-delay: -15s;
+}
+
+
 
 @media screen and (min-width: 1024px) {
     .heroContainer {
@@ -28,10 +69,10 @@
         gap: 15px;
         height: 375px;
         padding-top: 0px;
-        
-        .headerH2  {
-                display: none;
-           
+
+        .headerH2 {
+            display: none;
+
         }
 
         .introHeader {
@@ -53,6 +94,25 @@
     list-style: none;
 }
 
+/* Immediate fade-in utility */
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 575px) {
     .heroContainer {
         padding-top: 24px;
@@ -67,18 +127,18 @@
     }
 
     .heroList {
-      
+
         padding-left: 0;
         font-size: 18px;
         margin-bottom: 20px;
     }
 }
 
-.iconContainer { 
+.iconContainer {
     margin-top: 52px;
 }
 
-.headerH2 { 
+.headerH2 {
     color: #B1D0ED;
     font-size: 28px;
     font-weight: 600;
