@@ -1,6 +1,7 @@
 .btnContainer {
     display: flex;
     justify-content: center;
+    padding-left: 1rem;
 }
 
 // .projectContainer {
@@ -12,7 +13,7 @@
 //     }
 // }
 
-.projectCard { 
+.projectCard {
     margin-top: 40px;
 }
 
@@ -31,6 +32,8 @@
     background-color: #3E518C;
     border: 3px solid #7A8DC7;
     padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
 }
 
 .itemsHeader {
@@ -88,4 +91,11 @@
     .itemsGrid>.itemBox:nth-child(3) {
         grid-column: auto;
     }
+}
+
+
+// style={{position: 'relative', paddingTop: '56.25%'}}
+.videoInner {
+    position: relative;
+    padding-top: 56.25%;
 }

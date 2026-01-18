@@ -65,10 +65,10 @@
 
 .carouselContainer {
   display: flex;
-  // flex-wrap: wrap; 
+  // flex-wrap: wrap;
   justify-content: center;
   user-select: none;
-  
+  position: relative; /* anchor absolutely positioned header */
 }
 
 .carouselWrapper {
@@ -76,27 +76,42 @@
 }
 
 .carouselHeader {
-  background: black;
-  height: 50px;
+  background: rgba(0,0,0,0.85);
   position: absolute;
-  opacity: .85;
-  margin-top: 235px;
+  bottom: 12px; /* anchor near bottom */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  z-index: 30;
+  max-width: calc(100% - 48px);
+
   h1 {
     color: #B1D0ED;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 0px;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 80vw;
   }
 
-  a {
-    text-decoration: none;
-    color: #B1D0ED;
-  }
+  a { color: #B1D0ED; text-decoration: none; }
+}
+
+/* Small adjustments for tablet and mobile */
+@media (max-width: 1024px) {
+  .carouselHeader { bottom: 10px; padding: 7px 10px; }
+  .carouselHeader h1 { font-size: 16px; }
+}
+
+@media (max-width: 768px) {
+  .carouselHeader { bottom: 8px; padding: 6px 8px; }
+  .carouselHeader h1 { font-size: 14px; }
 }
 
 @media screen and (min-width:1024px) {

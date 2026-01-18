@@ -13,13 +13,13 @@
 }
 
 .recentTitle {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 0 #000;
 }
 
 .olderTitle {
-    font-size: 3.2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 0 #000;
 }
@@ -43,4 +43,83 @@
 .olderSection {
     padding-top: 2rem;
 }
+
+
+.recentProjectsContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.videoContainer {
+    flex: 0 0 640px;
+    max-width: 640px;
+}
+
+.videoInner {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+}
+
+.fillFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+}
+
+.colPadRight {
+    padding-right: 2rem;
+}
+
+.projectTitle {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.projectParagraph {
+    line-height: 1.6;
+}
+
+.fillMedia {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Stack content on medium/smaller screens (tablets) for readability */
+@media (max-width: 768px) {
+    .recentProjectsContainer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .videoContainer {
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .videoInner {
+        padding-top: 56.25%;
+    }
+
+    .projectText {
+        flex: 1 1 100%;
+        margin-top: 1rem;
+    }
+
+    .colPadRight {
+        padding-right: 0;
+    }
+
+    /* Make carousel media full-width inside the stacked layout */
+    .fillMedia { display: block; }
+}
+
 

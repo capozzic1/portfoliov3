@@ -23,40 +23,40 @@ export default function Projects( { projectPageContent }) {
 
             <main className={styles.main}>
                 <Row>
-                    <Col xl={{span:10, offset: 1}} xxxl={{span:10, offset: 2}} style={{paddingRight: '2rem'}}>
-                        <h2 style={{fontSize: '4rem', marginBottom: '1rem', textShadow: '2px 2px 0 #000'}}>Recent Projects</h2>
-                        <div style={{display: 'flex', alignItems: 'flex-start', gap: '2rem', marginTop: '1rem'}}>
-                            <div style={{flex: '0 0 640px', maxWidth: 640}}>
-                                <div style={{position: 'relative', paddingTop: '56.25%'}}>
-                                    <iframe src="https://www.youtube.com/embed/KJ-bnvzZUms?si=5AqgPahpMUUGQnSl" title="Hospital demo" style={{position:'absolute',top:0,left:0,width:'100%',height:'100%', objectFit: 'cover'}} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+                    <Col xl={{span:10, offset: 1}} xxxl={{span:10, offset: 2}} className={styles.colPadRight}>
+                        <h2 className={styles.recentTitle} >Recent Projects</h2>
+                        <div className={styles.recentProjectsContainer}>
+                            <div className={styles.videoContainer}>
+                                <div className={styles.videoInner}>
+                                    <iframe src="https://www.youtube.com/embed/KJ-bnvzZUms?si=5AqgPahpMUUGQnSl" title="Hospital demo" className={styles.fillFrame} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
                                 </div>
                             </div>
-                            <div className="project-text" style={{flex: '1'}}>
-                                <h3 style={{fontSize: '2rem', marginTop: 0}}>Hospital management system</h3>
-                                <p style={{lineHeight: 1.6}}>A full-stack healthcare management platform supporting patient records, scheduling, authentication, and role-based access.</p>
+                            <div className={styles.projectText}>
+                                <h3 className={styles.projectTitle}>Hospital management system</h3>
+                                <p className={styles.projectParagraph}>A full-stack healthcare management platform supporting patient records, scheduling, authentication, and role-based access.</p>
                                 <p>Tech stack: Java, Spring, Angular</p>
                             </div>
                         </div>
                     </Col>
 
-                    <Col xxl={{span:10, offset: 1}} xxxl={{span:10, offset: 2}} style={{paddingTop: '2rem'}}>
-                        <h2 style={{fontSize: '3.2rem', marginBottom: '1rem', textShadow: '2px 2px 0 #000'}}>Older Projects</h2>
-                        <div style={{marginTop: '1rem', display: 'flex', gap: '2rem', alignItems: 'flex-start'}}>
-                            <div style={{flex: '0 0 640px', maxWidth: 640}}>
-                                <div style={{position: 'relative', paddingTop: '56.25%'}}>
-                                    <div style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0}}>
+                    <Col xxl={{span:10, offset: 1}} xxxl={{span:10, offset: 2}} className={styles.olderSection}>
+                        <h2 className={styles.olderTitle}>Older Projects</h2>
+                        <div className={styles.recentProjectsContainer}>
+                            <div className={styles.videoContainer}>
+                                <div className={styles.videoInner}>
+                                    <div className={styles.mediaInner}>
                                         <Carousel headerData={homeData.homePageContent && homeData.homePageContent.homePageContent ? homeData.homePageContent.homePageContent.carouselContent : homeData.homePageContent && homeData.homePageContent.carouselContent ? homeData.homePageContent.carouselContent : []}>
-                                            <img src="/checkingoverview.png" alt="slide 1" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
-                                            <img src="/savingsoverview.png" alt="slide 2" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
-                                            <img src="/cdoverview.png" alt="slide 3" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                                            <img src="/checkingoverview.png" alt="slide 1" className={styles.fillMedia} />
+                                            <img src="/savingsoverview.png" alt="slide 2" className={styles.fillMedia} />
+                                            <img src="/cdoverview.png" alt="slide 3" className={styles.fillMedia} />
                                         </Carousel>
                                     </div>
                                 </div>
-                            </div>  
+                            </div>
 
-                            <div className="project-text" style={{flex: '1'}}>
-                                <h3 style={{fontSize: '2rem', marginTop: 0}}>Citi Marketing Pages</h3>
-                                <p style={{lineHeight: 1.6}}>Angular app where I helped the team create UI components and integrate front-end designs into production pages.</p>
+                            <div className={styles.projectText}>
+                                <h3 className={styles.projectTitle}>Citi Marketing Pages</h3>
+                                <p className={styles.projectParagraph}>Angular app where I helped the team create UI components and integrate front-end designs into production pages.</p>
                                 <p>Tech stack: Angular, Javascript, HTML, CSS, Content Management System</p>
                             </div>
                         </div>
