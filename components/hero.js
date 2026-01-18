@@ -2,6 +2,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'next/image';
 import styles from './hero.module.scss'
+import Orb from './Orb'
 import ImageHeader from './image-header';
 
 export default function Hero(props) {
@@ -22,8 +23,8 @@ export default function Hero(props) {
                             {listItems}
                         </ul>
                     </div>
-                    <div className={`${styles.orb} ${styles.orb1}`}></div>
-                    <div className={`${styles.orb} ${styles.orb2}`}></div>
+                    <Orb variant={1} />
+                    <Orb variant={2} />
                 </Col>
             </Col>
         </Row>

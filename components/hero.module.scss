@@ -18,21 +18,8 @@
     }
 
     /** animation */
-    position: relative;
-    background: linear-gradient(120deg,
-        #0f172a,
-        #1e293b,
-        #0b3c5d,
-        #1e293b);
-    background-size: 400% 400%;
-    animation: gradientDrift 2s ease infinite;
-    overflow: hidden;
-}
-
-@keyframes gradientDrift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    @import "../styles/mixins";
+    @include gradient-drift(2s);
 }
 
 .orb {

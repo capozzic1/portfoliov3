@@ -1,7 +1,12 @@
+import '../styles/bootstrap-custom.scss';
 import '../styles/global.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import ThemeProvider from 'react-bootstrap/ThemeProvider';
 
 export default function App({ Component, pageProps }) {
-    return <Component {...pageProps} />
+    const breakpoints = ['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs'];
+    return (
+        <ThemeProvider breakpoints={breakpoints}>
+            <Component {...pageProps} />
+        </ThemeProvider>
+    )
 }

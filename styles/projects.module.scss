@@ -1,0 +1,46 @@
+.main {
+    background: #12173F;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0;
+    color: #B1D0ED;
+
+    position: relative;
+    @import "./mixins";
+    @include gradient-drift(2s);
+    overflow: hidden;
+}
+
+.recentTitle {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.olderTitle {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.mediaBox {
+    flex: 0 0 420px;
+    max-width: 420px;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.mediaInner {
+    position: absolute;
+    inset: 0;
+}
+
+.projectText {
+    flex: 1;
+}
+
+.olderSection {
+    padding-top: 2rem;
+}
+

@@ -9,10 +9,10 @@ export default function Layout(props) {
         description: "Made with React and Next.js"
     }
     return (
-        <Container fluid>   
-        <Header />
-        {props.children}
-        <Footer footerContent={footerContent}/>
+        <Container fluid className="p-0">   
+            <Header />
+            {props.children}
+            <Footer footerContent={footerContent}/>
         </Container>
     )
 }

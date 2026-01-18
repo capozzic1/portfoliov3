@@ -47,7 +47,7 @@ export default function Carousel(props) {
     //thumbnailNavigator it would take the current index as well as an array of slides
     return (
         <Row className={styles.carouselWrapper}> 
-            <Col className={styles.carouselOuterContainer} xl={{ span: 8, offset: 2}}>
+            <Col className={styles.carouselOuterContainer} >
         <div {...handlers} className={styles.carouselContainer}>
   
             <Col xs={1} className={styles.leftBlock}>

@@ -1,11 +1,10 @@
 .slideContainer {
-    // width: 670px;
-
     img {
-      // max-width: 678px;
-      width: 124%;
-      height: 300px;
-      margin-left: -12%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-left: 0;
+      display: block;
     }
 }
 
@@ -13,10 +12,9 @@
   .slideContainer {
     width: 100%;
     img {
-      width: 106%;
+      width: 100%;
       max-width: none;
-      width: 120%;
-      margin-left: -10%;
+      margin-left: 0;
     }
 }
 
@@ -24,8 +22,8 @@
   width: 7% !important;
 }
 
-.carouselContainer {  
-  width: 824px;
+.carouselContainer {
+  width: 100%;
 }
 }
 
