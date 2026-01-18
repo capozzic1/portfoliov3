@@ -21,7 +21,8 @@ export default function ProjectCard(props) {
                                         <ImageHeader imgSrc={props.cardData.imgSrc} header={props.cardData.header} />
                                     </Col>
                                     <div className={styles.btnContainer}>
-                                        <Button ctaText={props.cardData.ctaText} bgColor="#3E518C" border={borderColor} />
+                                        {/* bgColor="#3E518C" border={borderColor} */}
+                                        <Button ctaText={props.cardData.ctaText}  />
                                     </div>
                                 </>
                             )}

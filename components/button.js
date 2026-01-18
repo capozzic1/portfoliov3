@@ -5,7 +5,8 @@ export default function Button(props) {
 
     return (
         <Link href="projects">
-        <button className={styles.ctaButton} style={{ background : props.bgColor, border: props.border }}>{props.ctaText}</button> 
+            {/* style={{ background : props.bgColor, border: props.border }} */}
+        <button className={styles.ctaButton} >{props.ctaText}</button> 
         </Link>
     )
 }

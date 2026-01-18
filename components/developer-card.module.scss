@@ -1,3 +1,5 @@
+       @import "../styles/mixins";
+
 @media screen and (min-width: 1024px) {
     .descriptionContainer {
         margin: 0 auto;
@@ -30,6 +32,8 @@
 .container {
     margin-top: 15px;
     color: #B1D0ED;
+
+    @include gradient-drift(2s);
 }
 
 
@@ -103,7 +107,7 @@
 }
 
 .toolsSection li {
-    font-size: 14px;
+    font-size: 1rem;
     opacity: 0.9;
     margin-bottom: 6px;
     color: #B1D0ED;
@@ -177,7 +181,7 @@
     p,
     h2,
     ul {
-        font-size: 22px;
+        font-size: 1.25rem;
     }
 }
 
@@ -221,9 +225,3 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .container {
-     
-    }
-
-}

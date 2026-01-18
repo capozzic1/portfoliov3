@@ -1,10 +1,41 @@
 .ctaButton {
     width: 220px;
-    background: #12173F;
+    background: #3E518C;
     height: 60px;
     color: #B1D0ED;
     border-style: none;
     border-radius: 10px;
     font-size: 26px;
     font-weight: 600;
+    border: 3px solid #7A8DC7;
+    animation: breathe 2s ease-in-out infinite;
+
+    background: linear-gradient(135deg,
+            rgba(62, 81, 140, 1),
+            rgba(122, 141, 199, .2),
+            rgba(62, 81, 140, 1));
+    background-size: 250% 250%;
+    background-position: 0% 0%;
+    transition: background-position 700ms ease;
+}
+
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(122, 141, 199, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 24px rgba(122, 141, 199, 0.8);
+    }
+}
+
+
+
+
+
+.ctaButton:hover {
+    background-position: 100% 100%;
 }
