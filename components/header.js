@@ -12,9 +12,8 @@ export default function Header() {
             </Col>
             <Col className={styles.navbtnContainer}  md={{ span: 6 }} xl={{ span: 9 }} xs={{ span: 12}} >
                 <div className={styles.projectsButtonContainer}>
-                    <Link href=""><a className={styles.projectsButton}>Experience</a></Link>
                     <Link href="/projects"><a className={styles.projectsButton}>Projects</a></Link>
-                    <Link href=""><a className={styles.projectsButton}>Blog</a></Link>
+                    <Link href="/blog"><a className={styles.projectsButton}>Blog</a></Link>
 
                 </div>
             </Col>
