@@ -10,8 +10,8 @@ export default function WorkExperienceCard(props) {
 
     return (
         <Row className={styles.projectRow}>
-            <Col >
-                <Col lg={{ span: 2, offset: 5}} md={{ span: 6, offset: 3}} className={styles.projectContainer}>
+            <Col xs={{ span: 10, offset: 1}}>
+                <Col lg={{ span: 2, offset: 5}} md={{ span: 8, offset: 2}} className={styles.projectContainer}>
                     {/* <Card cardData={props.cardData} bgColor="#3E518C" border={borderColor}>  */}
                     <div className={styles.cardContent}>
                         {/* If items provided, render a simple grid for them (used for Work Experience) */}

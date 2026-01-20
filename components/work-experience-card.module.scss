@@ -103,3 +103,9 @@
         grid-column: auto;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .cardContent {
+           margin-top: 30px;
+    }
+}
