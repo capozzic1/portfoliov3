@@ -1,22 +1,28 @@
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
 import styles from './header.module.css'
-import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function Header() {
     return (
-        <Row className={styles.headerRow}>
-            <Col className={styles.homeButtonContainer} md={{ span: 6 }} xs={12} xl={{ span: 3 }}>
-                <Link href="/"><a className={styles.homeButton}>Lucid Web Dream</a></Link>
-            </Col>
-            <Col className={styles.navbtnContainer}  md={{ span: 6 }} xl={{ span: 9 }} xs={{ span: 12}} >
-                <div className={styles.projectsButtonContainer}>
-                    <Link href="/projects"><a className={styles.projectsButton}>Projects</a></Link>
-                    <Link href="/blog"><a className={styles.projectsButton}>Blog</a></Link>
-
-                </div>
-            </Col>
-        </Row>
+        <Navbar expand="lg" className={styles.navbar} variant="light">
+            <Container>
+                <Navbar.Brand>
+                    <Link href="/">
+                        <a className={styles.homeButton}>Lucid Web Dream</a>
+                    </Link>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ms-auto">
+                        <Link href="/projects" passHref>
+                            <Nav.Link  className={styles.projectsButton}>Projects</Nav.Link>
+                        </Link>
+                        <Link href="/blog" passHref>
+                            <Nav.Link className={styles.projectsButton}>Blog</Nav.Link>
+                        </Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }

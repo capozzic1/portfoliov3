@@ -14,7 +14,7 @@
 }
 
 .projectsButton {
-    color: #12173F;
+    color: #12173F !important;
     text-decoration: none;
     font-size: 24px;
     font-weight: 600;
