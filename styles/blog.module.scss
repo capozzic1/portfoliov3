@@ -2,7 +2,7 @@
   background: #0f1b30; /* dark navy similar to design */
   color: #BAD5EE;
   font-family: 'Roboto Mono', monospace;
-  min-height: auto; /* allow page to size to its content so footer sits directly after */
+  min-height: 100vh; /* allow page to size to its content so footer sits directly after */
   padding-bottom: 0;
 
       @import "../styles/mixins";
