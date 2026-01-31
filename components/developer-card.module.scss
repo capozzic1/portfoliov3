@@ -94,7 +94,7 @@
 }
 
 .toolsHeading {
-    @extend .roboto-800;
+    font-family: "Rubik";
     font-weight: 800;
     color: #B1D0ED;
     margin-bottom: 6px;
@@ -225,3 +225,10 @@
     }
 }
 
+@media screen and (max-width: 768px) and (min-width: 576px) {
+    .toolsCol {
+        align-items: center;
+    }
+
+
+}

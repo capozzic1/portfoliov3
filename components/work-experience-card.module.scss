@@ -45,7 +45,7 @@
     text-align: center;
     color: #B1D0ED;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 800;
 }
 
@@ -107,5 +107,10 @@
 @media screen and (max-width: 425px) {
     .cardContent {
            margin-top: 30px;
+    }
+
+    .itemBox {
+        width: 100%;
+        height: 100%;
     }
 }
