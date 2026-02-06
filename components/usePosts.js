@@ -6,14 +6,14 @@ export default function usePosts() {
   return useQuery({
     queryKey: ['posts'],
     queryFn: async () => {
-      const res = await fetch('http://localhost:8080/api/posts')
+      const res = await fetch('/api/posts')
       if (!res.ok) {
         const txt = await res.text()
         throw new Error(txt || 'Failed to fetch posts')
       }
       return res.json()
     },
-    staleTime: 60_000,
+    staleTime: 5 * 60 * 1000,
     retry: 1,
     enabled: isClient,
   })
