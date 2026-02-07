@@ -6,7 +6,7 @@ import usePosts from './usePosts'
 import Modal from 'react-bootstrap/Modal'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { formatDate, sortedPosts } from '../utility/blog-utility'
-
+import { Col, Row } from 'react-bootstrap'
 export default function BlogTable() {
 	const { data: posts = [], isLoading, isError } = usePosts()
 
@@ -144,8 +144,11 @@ export default function BlogTable() {
 	const sortedPostsData = sortedPosts(posts)
 
 	return (
-		<>
-			<Table striped bordered hover>
+		
+		<Row>
+			<Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }} className="mt-4 mb-2">
+	
+			<Table variant='dark' striped bordered hover>
 				<thead>
 					<tr>
 						<th>Title</th>
@@ -267,6 +270,8 @@ export default function BlogTable() {
 					</Button>
 				</Modal.Footer>
 			</Modal>
-		</>
+					</Col>
+		</Row>
+		
 	)
 }

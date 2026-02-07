@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Form, InputGroup, Button, Alert } from 'react-bootstrap'
+import { Form, InputGroup, Button, Alert, Col, Row} from 'react-bootstrap'
 import { useMutation } from '@tanstack/react-query'
 import Layout from '/components/layout'
 import { useRouter } from 'next/router'
-
+import styles from '../page-styles/login.module.scss'
 async function loginRequest({ username, password }) {
   const res = await fetch('/api/auth/login', {
     method: 'POST',
@@ -37,8 +37,12 @@ export default function Login() {
 
   return (
     <Layout>
+      <div className={styles.loginContainer}>
+      <Row>
+        <Col md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 4 }} className="mt-5">
       <Form onSubmit={handleSubmit}>
-        <InputGroup className="mb-3">
+        <h1>My Super Cool Login Page</h1>
+        <InputGroup  className="mb-3">
           <Form.Control
             placeholder="Username"
             aria-label="Username"
@@ -69,6 +73,9 @@ export default function Login() {
           <Alert variant="success">Login successful</Alert>
         )}
       </Form>
+      </Col>
+      </Row>
+       </div>
     </Layout>
   )
 }

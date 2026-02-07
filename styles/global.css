@@ -26,3 +26,25 @@ h1, h2, h3 {
 }
 
 
+
+/* Ensure the app can pin the footer to the bottom when content is short */
+html, body, #__next {
+    height: 100%;
+}
+
+#__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Any element whose class name contains "footer" will be pushed to the
+   bottom of the page by taking advantage of auto margins inside the flex
+   column. This targets typical footer containers without depending on a
+   specific class name. */
+[class*="footerContainer"] {
+    margin-top: auto;
+}
+
+
+

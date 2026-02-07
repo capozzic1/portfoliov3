@@ -3,7 +3,7 @@ import Layout from '/components/layout';
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import BlogTable from '../components/blogtable';
-
+import styles from '../page-styles/cms.module.scss';
 function useMe() {
     const isClient = typeof window !== 'undefined'
 
@@ -46,7 +46,9 @@ export default function Cms() {
             }
     return (
         <Layout>
+            <div className={styles.cmsContainer}>
             {me && <BlogTable />}
+            </div>
         </Layout>
     )
 }

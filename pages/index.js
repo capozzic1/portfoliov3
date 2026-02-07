@@ -5,7 +5,7 @@ import ProjectCard from '/components/project-card';
 import WorkExperienceCard from '/components/work-experience-card';
 import DeveloperCard from '/components/developer-card';
 import indexData from '../data/index.json';
-
+// import 'bootstrap/dist/css/bootstrap.min.css';
 export async function getStaticProps() {
     const homePageContent = indexData.homePageContent;
 
