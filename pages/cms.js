@@ -1,24 +1,10 @@
 import { useEffect } from 'react';
 import Layout from '/components/layout';
-import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import BlogTable from '../components/blogtable';
 import styles from '../page-styles/cms.module.scss';
-function useMe() {
-    const isClient = typeof window !== 'undefined'
+import useMe from '../utility/login-utility';
 
-    return useQuery({
-        queryKey: ['me'],
-        queryFn: async () => {
-            const res = await fetch('/api/auth/me', { credentials: "include" })
-            if (res.status === 401) return null
-            if (!res.ok) throw new Error("Failed to fetch /me")
-            return res.json()
-        },
-            retry: false,
-            enabled: isClient,
-    })
-}
 
 export default function Cms() {
       const { data: me, isLoading, isError } = useMe()
