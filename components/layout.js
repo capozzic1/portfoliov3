@@ -6,7 +6,7 @@ export default function Layout(props) {
     const footerContent = {
         header: "Around the web:",
         header2: "About this page:",
-        description: "Made with React and Next.js"
+        description: "Frontend built with Next.js, React-Bootstrap, and React Query. Backend built with Spring Boot and PostgreSQL.",
     }
     return (
         <Container fluid className="p-0">   

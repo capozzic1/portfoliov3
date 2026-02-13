@@ -28,7 +28,7 @@ export default function Header() {
       }
       console.log(me)
     return (
-        <Navbar expand="lg" className={styles.navbar} variant="light">
+        <Navbar expand="lg" className={styles.navbar}>
             <Container>
                 <Navbar.Brand>
                     <Link href="/">

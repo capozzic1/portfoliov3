@@ -146,7 +146,7 @@ export default function BlogTable() {
 	return (
 		
 		<Row>
-			<Col md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }} className="mt-4 mb-2">
+			<Col className="mt-4 mb-2">
 	
 			<Table variant='dark' striped bordered hover>
 				<thead>

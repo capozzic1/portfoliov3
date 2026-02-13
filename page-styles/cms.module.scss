@@ -1,3 +1,11 @@
 .cmsContainer {
-    height: 100%;;
+    height: 100%;
+        display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.cmsContainer :global(#cms-tabs) {
+    justify-content: center;
 }

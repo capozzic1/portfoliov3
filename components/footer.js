@@ -22,7 +22,7 @@ export default function Footer(props) {
                 </Row>
             </Col>
            {/* </Row> */}
-           <Col className={styles.aboutContainer} xs={12}>
+           <Col className={styles.aboutContainer} xs={{ span: 10, offset: 1}}>
            <h2>{props.footerContent.header2}</h2>
            <p>{props.footerContent.description}</p>
            </Col>

@@ -51,7 +51,7 @@
                     "toolDescription": "Languages and tools I work with:",
                     "frontend": ["Javascript","Angular","React","HTML","CSS"],
                     "backend": ["Java","Spring","MySQL","PostgreSQL","MongoDB","Docker","AWS"],
-                    "ai": ["ChatGPT","Github Copilot"]
+                    "ai": ["ChatGPT","Github Copilot", "Codex"]
                 },
                 "headerContent": {
                     "homeButton": "Lucid Web Dream",

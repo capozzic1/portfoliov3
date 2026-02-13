@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { Form, InputGroup, Button, Alert, Col, Row} from 'react-bootstrap'
-import { useMutation } from '@tanstack/react-query'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import Layout from '/components/layout'
 import { useRouter } from 'next/router'
 import styles from '../page-styles/login.module.scss'
 async function loginRequest({ username, password }) {
   const res = await fetch('/api/auth/login', {
     method: 'POST',
+    credentials: 'include',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
   })
@@ -14,17 +15,23 @@ async function loginRequest({ username, password }) {
     const errText = await res.text()
     throw new Error(errText || 'Login failed')
   }
-  return res.json()
+  try {
+    return await res.json()
+  } catch (err) {
+    return null
+  }
 }
 
 export default function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const router = useRouter()
+  const queryClient = useQueryClient()
 
 
   const mutation = useMutation(loginRequest, {
-    onSuccess: () => {
+    onSuccess: async () => {
+      await queryClient.invalidateQueries(['me'])
       router.push('/cms')
     },
 
