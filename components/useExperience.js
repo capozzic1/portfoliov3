@@ -14,7 +14,8 @@ export default function useExperience() {
       return res.json()
     },
     staleTime: 5 * 60 * 1000,
-    retry: 1,
+    retry: false,
+    refetchOnWindowFocus: false,
     enabled: isClient,
   })
 }
