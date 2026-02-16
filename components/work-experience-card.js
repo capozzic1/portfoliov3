@@ -4,7 +4,7 @@ import Button from "./button";
 import ImageHeader from "./image-header";
 import styles from './work-experience-card.module.scss';
 import useExperience from "./useExperience";
-
+import styles2 from  '../styles/spinner.module.scss'
 export default function WorkExperienceCard(props) {
     const items = props.cardData && props.cardData.items;
     const { data: experience = [], isLoading, isError } = useExperience()
@@ -15,7 +15,7 @@ export default function WorkExperienceCard(props) {
     return (
         
         isLoading ? (
-            <div className={styles.spinnerContainer}>
+            <div className={styles2.spinnerContainer}>
                      <Spinner animation="border" variant="primary" />
             </div>
         ) : (

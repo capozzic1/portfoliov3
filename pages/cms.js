@@ -7,8 +7,8 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import styles from '../page-styles/cms.module.scss';
 import useMe from '../utility/login-utility';
-import { Col, Row } from 'react-bootstrap';
-
+import { Col, Row, Spinner } from 'react-bootstrap';
+import styles2 from  '../styles/spinner.module.scss'
 
 export default function Cms() {
       const { data: me, isLoading, isError } = useMe()
@@ -22,7 +22,8 @@ export default function Cms() {
             if (isLoading) {
                 return (
                     <Layout>
-                        Loading...
+                        <div className={styles2.spinnerContainer}><Spinner animation="grow" variant="primary" />
+                        </div>
                     </Layout>
                 )
             }

@@ -5,11 +5,12 @@ import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row, Spinner } from 'react-bootstrap'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import useExperience from './useExperience'
- 
- export default function ExperienceTable() {
+import styles2 from  '../styles/spinner.module.scss'
+
+export default function ExperienceTable() {
 
 	const { data: experience = [], isLoading, isError } = useExperience()
 
@@ -107,7 +108,10 @@ import useExperience from './useExperience'
 		}
 	)
 
-	if (isLoading) return <div>Loading experience...</div>
+	if (isLoading) return(
+			<div className={styles2.spinnerContainer}><Spinner animation="grow" variant="primary" />
+			</div>
+	)
 	if (isError) return <div>Error loading experience.</div>
 
 	const openEdit = (item) => {
@@ -318,4 +322,4 @@ import useExperience from './useExperience'
 			</Col>
 		</Row>
 	)
- }
+}
