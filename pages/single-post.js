@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '/components/layout'
 import styles from '../styles/blog.module.scss'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
 
@@ -26,7 +26,7 @@ export default function SinglePost() {
 
   if (isLoading) return (
     <Layout>
-      <div className={styles.singlePage}><main className={styles.main}><Container>Loading post...</Container></main></div>
+      <div className={styles.singlePage}><main className={styles.main}><Spinner animation="border" variant="primary" /></main></div>
     </Layout>
   )
 

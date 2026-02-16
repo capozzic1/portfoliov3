@@ -1,11 +1,12 @@
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
 import usePosts from './usePosts'
+import { Spinner } from 'react-bootstrap'
 
 export default function BlogTable() {
 	const { data: posts = [], isLoading, isError } = usePosts()
 
-	if (isLoading) return <div>Loading posts...</div>
+	if (isLoading) return <div><Spinner animation="border" variant="primary" /></div>
 	if (isError) return <div>Error loading posts.</div>
 
 	return (

@@ -6,7 +6,7 @@ import usePosts from './usePosts'
 import Modal from 'react-bootstrap/Modal'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { formatDate, sortedPosts } from '../utility/blog-utility'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row, Spinner } from 'react-bootstrap'
 export default function BlogTable() {
 	const { data: posts = [], isLoading, isError } = usePosts()
 
@@ -91,7 +91,7 @@ export default function BlogTable() {
 	const [showNewModal, setShowNewModal] = useState(false)
 	const [newPost, setNewPost] = useState({ title: '', content: '', author: 'hay' })
 
-	if (isLoading) return <div>Loading posts...</div>
+	if (isLoading) return  <Spinner animation="border" variant="primary" />
 	if (isError) return <div>Error loading posts.</div>
 
 	const openEdit = (post) => {

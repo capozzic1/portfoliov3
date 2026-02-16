@@ -1,4 +1,4 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Spinner } from "react-bootstrap";
 import Button from "./button";
 
 import ImageHeader from "./image-header";
@@ -10,12 +10,18 @@ export default function WorkExperienceCard(props) {
     const { data: experience = [], isLoading, isError } = useExperience()
     console.log(experience)
 
-    	if (isLoading) return <div>Loading experience...</div>
+    	
 
     return (
-        <Row className={styles.projectRow}>
-            <Col xs={{ span: 10, offset: 1 }}>
-                <Col lg={{ span: 2, offset: 5 }} md={{ span: 8, offset: 2 }} className={styles.projectContainer}>
+        
+        isLoading ? (
+            <div className={styles.spinnerContainer}>
+                     <Spinner animation="border" variant="primary" />
+            </div>
+        ) : (
+            <Row className={styles.projectRow}>
+                <Col xs={{ span: 10, offset: 1 }}>
+                    <Col lg={{ span: 2, offset: 5 }} md={{ span: 8, offset: 2 }} className={styles.projectContainer}>
                     <div className={styles.cardContent}>
                         {/* If items provided, render a simple grid for them (used for Work Experience) */}
                         {experience && experience.length > 0 ? (
@@ -54,4 +60,5 @@ export default function WorkExperienceCard(props) {
             </Col>
         </Row>
     )
+)
 }

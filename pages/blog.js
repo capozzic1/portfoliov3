@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/blog.module.scss'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import Layout from "/components/layout";
 import Link from 'next/link'
 import Orb from '../components/Orb';
@@ -13,7 +13,7 @@ export default function Blog() {
 
   if (isLoading) return (
     <Layout>
-      <div className={styles.page}><main className={styles.main}><Container>Loading posts...</Container></main></div>
+      <div className={styles.page}><main className={styles.main}> <Spinner animation="border" variant="primary" /></main></div>
     </Layout>
   )
 
