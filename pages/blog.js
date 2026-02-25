@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/blog.module.scss'
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
-import Layout from "/components/layout";
+
 import Link from 'next/link'
 import Orb from '../components/Orb';
 import usePosts from '../components/usePosts'
@@ -12,21 +12,21 @@ export default function Blog() {
   const { data: posts = [], isLoading, isError } = usePosts()
 
   if (isLoading) return (
-    <Layout>
+   
       <div className={styles.page}><main className={styles.main}> <Spinner animation="border" variant="primary" /></main></div>
-    </Layout>
+
   )
 
   if (isError) return (
-    <Layout>
+
       <div className={styles.page}><main className={styles.main}><Container>Error loading posts.</Container></main></div>
-    </Layout>
+   
   )
 
   const sortedPostsData = sortedPosts(posts)
   return (
     <>
-    <Layout>
+
       <div className={styles.page}>
 
 
@@ -60,7 +60,7 @@ export default function Blog() {
                  <Orb variant={1} />
                  <Orb variant={2} />
       </div>
-      </Layout>
+
     </>
   )
 }

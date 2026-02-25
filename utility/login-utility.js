@@ -13,6 +13,8 @@ export default function useMe() {
             return res.json()
         },
             retry: false,
-            enabled: isClient,
+            enabled: false
+
+
     })
 }

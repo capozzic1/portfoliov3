@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '/components/layout'
+
 import styles from '../styles/blog.module.scss'
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import { useRouter } from 'next/router'
@@ -25,15 +25,15 @@ export default function SinglePost() {
   })
 
   if (isLoading) return (
-    <Layout>
+
       <div className={styles.singlePage}><main className={styles.main}><Spinner animation="border" variant="primary" /></main></div>
-    </Layout>
+
   )
 
   if (isError || !post) return (
-    <Layout>
+
       <div className={styles.singlePage}><main className={styles.main}><Container>Error loading post.</Container></main></div>
-    </Layout>
+  
   )
 
   const pretty = post?.createdAt ? new Date(post.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) : ''
@@ -46,7 +46,7 @@ export default function SinglePost() {
     : []
 
   return (
-    <Layout>
+ 
       <div className={styles.singlePage}>
         <main className={styles.main}>
           <Container>
@@ -71,6 +71,6 @@ export default function SinglePost() {
           </Container>
         </main>
       </div>
-    </Layout>
+  
   )
 }

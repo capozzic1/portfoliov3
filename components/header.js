@@ -26,7 +26,7 @@ export default function Header() {
           e?.preventDefault()
           logoutMutation.mutate()
       }
-      console.log(me)
+
     return (
         <Navbar expand="lg" className={styles.navbar}>
             <Container>

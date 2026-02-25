@@ -1,6 +1,7 @@
 import '../styles/bootstrap-custom.scss';
 import '../styles/global.css';
 import ThemeProvider from 'react-bootstrap/ThemeProvider';
+import Layout from '../components/layout';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
@@ -10,7 +11,9 @@ export default function App({ Component, pageProps }) {
     return (
         <QueryClientProvider client={queryClient}>
             <ThemeProvider breakpoints={breakpoints}>
+                <Layout>
                 <Component {...pageProps} />
+                </Layout>
             </ThemeProvider>
         </QueryClientProvider>
     )

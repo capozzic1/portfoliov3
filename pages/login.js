@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Form, InputGroup, Button, Alert, Col, Row} from 'react-bootstrap'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import Layout from '/components/layout'
 import { useRouter } from 'next/router'
 import styles from '../page-styles/login.module.scss'
+import useMe from '../utility/login-utility'
 async function loginRequest({ username, password }) {
   const res = await fetch('/api/auth/login', {
     method: 'POST',
@@ -27,11 +27,13 @@ export default function Login() {
   const [password, setPassword] = useState('')
   const router = useRouter()
   const queryClient = useQueryClient()
+  const { data: me, refetch, isLoading, isError } = useMe()
 
 
   const mutation = useMutation(loginRequest, {
     onSuccess: async () => {
       await queryClient.invalidateQueries(['me'])
+      refetch()
       router.push('/cms')
     },
 
@@ -43,7 +45,7 @@ export default function Login() {
   }
 
   return (
-    <Layout>
+
       <div className={styles.loginContainer}>
       <Row>
         <Col md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 4 }} className="mt-5">
@@ -83,6 +85,6 @@ export default function Login() {
       </Col>
       </Row>
        </div>
-    </Layout>
+
   )
 }
