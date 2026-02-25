@@ -9,7 +9,6 @@ export default function Carousel(props) {
     //have a starting index
     //have left and right arrows
     //have the thumbnail navigator on the bottom   
-    // console.log(React.Children.toArray(children))
     // const thirdEl = React.Children.toArray(children)[2];
     // const firstEl = React.Children.toArray(children)[0]
     const slides = React.Children.toArray(props.children);
@@ -39,12 +38,7 @@ export default function Carousel(props) {
         preventScrollOnSwipe: true,
         trackMouse: true
       });
-    // use the index of the arr to move from slide to slide
-    // keep an active slide, it will be the one shown to the user. 
-    // React.Children.map(children, () => {
-    //     // console.log(children)
-    // })
-    //thumbnailNavigator it would take the current index as well as an array of slides
+
     return (
         <Row className={styles.carouselWrapper}> 
             <Col className={styles.carouselOuterContainer} >

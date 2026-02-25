@@ -8,7 +8,6 @@ import styles2 from  '../styles/spinner.module.scss'
 export default function WorkExperienceCard(props) {
     const items = props.cardData && props.cardData.items;
     const { data: experience = [], isLoading, isError } = useExperience()
-    console.log(experience)
 
     	
 

@@ -26,7 +26,6 @@ export default function Cms() {
 
         )
     }
-    console.log(isInitialLoading,me)
     if (isError) {
         return (
             <div>

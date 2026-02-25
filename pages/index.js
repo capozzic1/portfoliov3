@@ -17,7 +17,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ homePageContent }) {
-    console.log(homePageContent)
     const homePageContentData = homePageContent.homePageContent
 
 
