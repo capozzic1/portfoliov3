@@ -1,4 +1,3 @@
-import Banner from "/components/banner";
 import Carousel from "/components/carousel";
 import { Row, Col } from 'react-bootstrap';
 import projectsData from '../data/projects.json';
@@ -16,10 +15,12 @@ export async function getStaticProps() {
 }
 
 export default function Projects( { projectPageContent }) {
+
     const projectData = projectPageContent.projects;
     return (
+          <Row>
             <main className={styles.main}>
-                <Row>
+              
                     <Col xl={{span:10, offset: 1}} xxxl={{span:10, offset: 2}} className={styles.colPadRight}>
                         <h2 className={styles.recentTitle} >Recent Projects</h2>
                         <div className={styles.recentProjectsContainer}>
@@ -58,9 +59,10 @@ export default function Projects( { projectPageContent }) {
                             </div>
                         </div>
                     </Col>
-                </Row>
+              
                 <Orb variant={1} />
                 <Orb variant={2} />
             </main>
+              </Row>
     )
 }

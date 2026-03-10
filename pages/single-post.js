@@ -25,15 +25,15 @@ export default function SinglePost() {
   })
 
   if (isLoading) return (
-
+<Row>
       <div className={styles.singlePage}><main className={styles.main}><Spinner animation="border" variant="primary" /></main></div>
-
+</Row>
   )
 
   if (isError || !post) return (
-
+<Row>
       <div className={styles.singlePage}><main className={styles.main}><Container>Error loading post.</Container></main></div>
-  
+  </Row>
   )
 
   const pretty = post?.createdAt ? new Date(post.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) : ''
@@ -46,7 +46,7 @@ export default function SinglePost() {
     : []
 
   return (
- 
+    <Row>
       <div className={styles.singlePage}>
         <main className={styles.main}>
           <Container>
@@ -71,6 +71,6 @@ export default function SinglePost() {
           </Container>
         </main>
       </div>
-  
+  </Row>  
   )
 }

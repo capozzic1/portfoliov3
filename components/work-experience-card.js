@@ -7,7 +7,7 @@ import useExperience from "./useExperience";
 import styles2 from  '../styles/spinner.module.scss'
 export default function WorkExperienceCard(props) {
     const items = props.cardData && props.cardData.items;
-    const { data: experience = [], isLoading, isError } = useExperience()
+    const { data: experience = [], isLoading} = useExperience()
 
     	
 
@@ -19,8 +19,7 @@ export default function WorkExperienceCard(props) {
             </div>
         ) : (
             <Row className={styles.projectRow}>
-                <Col xs={{ span: 10, offset: 1 }}>
-                    <Col lg={{ span: 2, offset: 5 }} md={{ span: 8, offset: 2 }} className={styles.projectContainer}>
+                    <Col xxxl={{ span: 2, offset: 5 }} lg={{ span: 3, offset: 5 }} md={{ span: 8, offset: 2 }} xs={{ span: 10, offset: 1 }} className={styles.projectContainer}>
                     <div className={styles.cardContent}>
                         {/* If items provided, render a simple grid for them (used for Work Experience) */}
                         {experience && experience.length > 0 ? (
@@ -54,9 +53,7 @@ export default function WorkExperienceCard(props) {
                             </>
                         )}
                     </div>
-                    {/* </Card> */}
                 </Col>
-            </Col>
         </Row>
     )
 )

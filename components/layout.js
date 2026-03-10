@@ -1,4 +1,4 @@
-import { Container} from "react-bootstrap";
+import { Container, Row} from "react-bootstrap";
 import Footer from "./footer";
 import Header from "./header";
 

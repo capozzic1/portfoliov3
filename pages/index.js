@@ -5,6 +5,7 @@ import ProjectCard from '/components/project-card';
 import WorkExperienceCard from '/components/work-experience-card';
 import DeveloperCard from '/components/developer-card';
 import indexData from '../data/index.json';
+import { Row } from 'react-bootstrap';
 
 export async function getStaticProps() {
     const homePageContent = indexData.homePageContent;
@@ -23,17 +24,9 @@ export default function Home({ homePageContent }) {
     return (
         <>
             <Hero introHeader={homePageContentData.introHeader} />
-        
             <WorkExperienceCard cardData={homePageContentData.workExperience} />
-         
-            <div>
-
-            </div>
-            <div className="developerCard">
-                <DeveloperCard developerCardData={homePageContentData.developerCard} />
-            </div>
-         
-            <ProjectCard cardData={homePageContentData.projectCard}/>
-       </>
+            <DeveloperCard developerCardData={homePageContentData.developerCard} />
+            <ProjectCard cardData={homePageContentData.projectCard} />
+        </>
     )
 }
