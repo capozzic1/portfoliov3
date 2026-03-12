@@ -1,20 +1,25 @@
 .navbtnContainer {
     display: flex;
     align-items: center;
-  
+
     justify-content: end;
+}
+
+.navbar {
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .homeButton {
     font-family: 'Audiowide', cursive;
-    color: #12173F;
+    transition: var(--font-color-transition);
     text-decoration: none;
     font-size: 28px;
     margin-left: 20px;
 }
 
+
 .projectsButton {
-    color: #12173F !important;
     text-decoration: none;
     font-size: 24px;
     font-weight: 600;
@@ -31,28 +36,29 @@
 .homeButtonContainer {
     display: flex;
     align-items: center;
-    
+
 }
 
 .headerRow {
-        min-height: 75px;
+    min-height: 75px;
 }
 
 @media screen and (max-width: 425px) {
     .homeButton {
         font-size: 20px;
     }
+
     .projectsButtonContainer {
         flex-direction: column;
-        
+
     }
-.navbtnContainer {
-    justify-content: start;
-}
 
-.homeButtonContainer {
-    justify-content: center;
-}
+    .navbtnContainer {
+        justify-content: start;
+    }
+
+    .homeButtonContainer {
+        justify-content: center;
+    }
 
 }
-

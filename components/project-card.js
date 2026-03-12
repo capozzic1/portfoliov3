@@ -8,20 +8,20 @@ export default function ProjectCard(props) {
     return (
         <div className={styles.projectCard}>
             <Row className={styles.projectRow}>
-                <Col xxxl={{ span: 4, offset: 4 }} xl={{ span: 8, offset: 2 }} xs={{ span: 10, offset: 1 }}>
+                <Col xxxl={{ span: 12 }} xl={{ span: 12 }} xs={{ span: 10 }}>
                     <div className={styles.cardContent}>
                         <Col xl={12} className={styles.projectContainer}>
-                            {(
-                                <>
-                                    <Col xxxl={{ span: 7 }} xl={{ span: 6, offset: 1 }}>
+                            
+                                    {/* xxxl={{ span: 6 }} xl={{ span: 6, offset: 1 }} */}
+                                    <Col >
                                         <ImageHeader imgSrc={props.cardData.imgSrc} header={props.cardData.header} />
                                     </Col>
                                     <div className={styles.btnContainer}>
              
                                         <Button ctaText={props.cardData.ctaText} />
                                     </div>
-                                </>
-                            )}
+                            
+                            
                         </Col>
                     </div>
 

@@ -25,8 +25,7 @@ export default function Home({ homePageContent }) {
         <>
             <Hero introHeader={homePageContentData.introHeader} />
             <WorkExperienceCard cardData={homePageContentData.workExperience} />
-            <DeveloperCard developerCardData={homePageContentData.developerCard} />
-            <ProjectCard cardData={homePageContentData.projectCard} />
+            <DeveloperCard developerCardData={homePageContentData.developerCard} projectCardData={homePageContentData.projectCard}/>
         </>
     )
 }

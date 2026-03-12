@@ -5,13 +5,8 @@
 
 
 .footerContainer { 
-    background: #12173F;
-    color: #B1D0ED;
     margin-top: 0;
 
-    a {
-        color: #B1D0ED;
-    }
 
     svg {
         height: 50px;
@@ -24,16 +19,7 @@
     }
 }
 
-.iconContainer {
-    // display: flex;
-    // align-items: center;
-    // flex-direction: column;
-    // div {
-    //     width: 50%;
-    //     display: flex;
-    //     justify-content: space-between;
-    // }
-}
+
 
 .attributionsContainer {
     display: flex;

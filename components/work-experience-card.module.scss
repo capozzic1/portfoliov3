@@ -15,8 +15,8 @@
 //         <div className={styles.cardContent}>
 
 .cardContent {
-    background-color: #3E518C;
-    border: 3px solid #7A8DC7;
+    background-color: var(--color-surface-2);
+    border: 2px solid var(--color-line-glow);
     padding: 30px 50px;
     border-radius: 10px;
 }
@@ -43,34 +43,30 @@
 
 .itemsHeader {
     text-align: center;
-    color: #B1D0ED;
+
     margin-bottom: 20px;
     font-size: 1.5rem;
     font-weight: 800;
 }
 
-.itemsWrapper {
-    color: #B1D0ED;
-}
-
 .itemsGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 300px 300px;
     gap: 28px;
     justify-items: center;
     align-items: start;
 }
 
 .itemBox {
-    width: 208px;
-    height: 158px;
+    width: 300px;
+    height: 130px;
     max-width: 100%;
 
     padding: 22px;
     background: #0F1730;
-    color: #B1D0ED;
     box-sizing: border-box;
-    border: 3px solid #7A8DC7;
+    border: 2px solid var(--color-line-glow);
+    border-radius: 15px;
 }
 
 .itemCompany {
@@ -90,8 +86,19 @@
 }
 
 /* Place the 3rd item under the first column (to match design) */
+.itemsGrid>.itemBox:nth-child(1) {
+    background: var(--we-card-bg);
+}
+
+.itemsGrid>.itemBox:nth-child(2) {
+    background: var(--we-card-bg2);
+
+}
+
 .itemsGrid>.itemBox:nth-child(3) {
-    grid-column: 1;
+    background: var(--we-card-bg3);
+    grid-column: 1 / -1;
+    justify-self: center;
 }
 
 @media screen and (max-width: 1023px) {
@@ -106,7 +113,7 @@
 
 @media screen and (max-width: 425px) {
     .cardContent {
-           margin-top: 30px;
+        margin-top: 30px;
     }
 
     .itemBox {
@@ -114,4 +121,3 @@
         height: 100%;
     }
 }
-

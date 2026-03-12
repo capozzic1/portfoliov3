@@ -1,8 +1,153 @@
-html, body {
+:root {
+    --font-color-transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+html[data-theme="light"] {
+    /* PAGE */
+    --color-bg: #eef2f7;
+    --color-bg-top: #f8fbff;
+    --color-bg-section: #e8edf4;
+
+    /* SURFACES */
+    --color-surface: #ffffff;
+    --color-surface-2: #f4f7fb;
+    --color-panel: #f7f9fc;
+    --color-card: #ffffff;
+
+    /* TEXT */
+    --color-text: #1f3566;
+    --color-text-soft: #34599d;
+    --color-text-muted: #5f7298;
+    --color-heading: #1a2f63;
+
+    /* BORDERS */
+    --color-border: rgba(55, 90, 160, 0.12);
+    --color-border-strong: rgba(55, 90, 160, 0.2);
+    --color-divider: rgba(95, 140, 220, 0.35);
+
+    /* ACCENTS */
+    --color-accent: #1f84d1;
+    /* blue */
+    --color-accent-2: #31438b;
+    /* indigo/navy */
+    --color-accent-3: #53c7dc;
+    /* cyan */
+
+    /* GLOWS */
+    --color-glow-primary: rgba(83, 199, 220, 0.28);
+    --color-glow-secondary: rgba(100, 181, 246, 0.18);
+    --color-line-glow: rgba(83, 199, 220, 0.32);
+
+    /* BUTTONS */
+    --color-button-bg: #334692;
+    --color-button-bg-hover: #4057b0;
+    --color-button-text: #ffffff;
+    --color-button-secondary-bg: #5068d4;
+
+    /* SHADOWS */
+    --shadow-sm: 0 8px 20px rgba(31, 53, 102, 0.08);
+    --shadow-md: 0 16px 36px rgba(31, 53, 102, 0.12);
+    --shadow-lg: 0 22px 50px rgba(31, 53, 102, 0.14);
+
+    /* SPECIAL */
+    --hero-left-glow: rgba(100, 181, 246, 0.42);
+    --hero-right-glow: rgba(83, 199, 220, 0.5);
+    --experience-panel-bg: rgba(255, 255, 255, 0.82);
+    --experience-card-1: #31438b;
+    --experience-card-2: #155b8c;
+    --experience-card-text: #f5f8ff;
+}
+
+html[data-theme="dark"] {
+    /* PAGE */
+    --color-bg: #070b17;
+    --color-bg-top: #0a1020;
+    --color-bg-section: #0c1427;
+
+    /* SURFACES */
+    --color-surface: #0e162c;
+    --color-surface-2: #101a32;
+    --color-panel: rgba(20, 29, 52, 0.74);
+    --color-card: rgba(8, 14, 30, 0.88);
+    /* #060c40 */
+    --we-card-bg: #060c40;
+    --we-card-bg2: #131a5c;
+    --we-card-bg3:#0f1a88;
+
+    /* TEXT */
+    --color-text: #d7e3ff;
+    --color-text-soft: #b6c5ec; 
+    --color-text-muted: #8fa3d8;
+    --color-heading: #a8b4fa;
+    /* border-bottom: 1px solid rgb(54 59 95); */
+    /* BORDERS */
+    --color-border: rgb(54, 59, 95);
+    --color-border-strong: rgba(126, 149, 255, 0.38);
+    --color-divider: rgba(132, 146, 255, 0.34);
+
+    /* ACCENTS */
+    --color-accent: #6f86ff;
+    /* indigo-blue */
+    --color-accent-2: #7e57c2;
+    /* purple */
+    --color-accent-3: #64b5f6;
+    /* cool blue */
+
+    /* GLOWS */
+    --color-glow-primary: rgba(111, 134, 255, 0.8);
+    --color-glow-secondary: rgba(126, 87, 194, 0.8);
+    --color-line-glow: rgba(111, 134, 255, 0.55);
+
+    /* BUTTONS */
+    --color-button-bg: #31438b;
+    --color-button-bg-hover: #4258b7;
+    --color-button-text: #ffffff;
+    --color-button-secondary-bg: #5068d4;
+
+    /* SHADOWS */
+    --shadow-sm: 0 12px 24px rgba(0, 0, 0, 0.24);
+    --shadow-md: 0 22px 48px rgba(0, 0, 0, 0.34);
+    --shadow-lg: 0 34px 80px rgba(0, 0, 0, 0.42);
+
+    /* SPECIAL */
+    --hero-left-glow: rgba(126, 87, 194, 0.22);
+    --hero-right-glow: rgba(111, 134, 255, 0.22);
+    --experience-panel-bg: rgba(20, 29, 52, 0.72);
+    --experience-card-1: rgba(6, 11, 24, 0.92);
+    --experience-card-2: rgba(9, 16, 30, 0.92);
+    --experience-card-text: #eef3ff;
+
+      --color-bg: #0b1020;
+  --color-bg-elevated: #1a2747;
+  --color-line-glow: #6fa8dc;
+
+}
+
+
+
+
+
+html,
+body {
     margin: 0;
     padding: 0;
-    background: #B1D0ED !important;
+    /* background: #B1D0ED !important; */
     overflow-x: clip;
+
+}
+
+body {
+  background: var(--color-bg);
+    color: var(--color-heading) !important;
+    transition: var(--font-color-transition);
+
+    a,button {
+        color: var(--color-heading) !important;
+    }
+
+    a:hover {
+        color: var(--color-button-bg-hover) !important;
+    }
 }
 
 * {
@@ -13,7 +158,9 @@ html, body {
 /* Roboto Mono for headlines */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -28,7 +175,9 @@ h1, h2, h3 {
 
 
 /* Ensure the app can pin the footer to the bottom when content is short */
-html, body, #__next {
+html,
+body,
+#__next {
     height: 100%;
 }
 
@@ -45,6 +194,3 @@ html, body, #__next {
 [class*="footerContainer"] {
     margin-top: auto;
 }
-
-
-

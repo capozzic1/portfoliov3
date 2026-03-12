@@ -12,7 +12,7 @@ export default function Hero(props) {
     })
     return (
         <Row>
-            <Col className={styles.heroContainer}>
+            <Col className={`${styles.heroContainer} ${styles.glowInside} `}>
                 <Image src={props.introHeader.heroIcon} alt="portfolio" width={100} height={100} />
                 {/* <ImageHeader  fullWidthHeader={true} imgSrc={props.introHeader.heroIcon} header={header}/> */}
                 <Col xxxl={{ span: 2,offset: 0 }} xxl={{ span: 4,  }} xs={{ span: 10, offset: 1 }} md={{ span: 8, offset: 1 }}>

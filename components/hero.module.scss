@@ -1,17 +1,17 @@
 .heroContainer {
     height: 420px;
-    background: #12173F;
-    color: #B1D0ED;
+    background: var(--color-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
+    border-bottom: 2px solid var(--color-line-glow);
 
     h1 {
         font-size: 28px;
     }
 
-    ul {
+    ul {    
         padding: 0px !important;
         font-style: italic;
         font-size: 2rem;
@@ -19,32 +19,32 @@
 
     /** animation */
     @import "../styles/mixins";
-    @include gradient-drift(2s);
+    // @include gradient-drift(2s);
+    position: relative;
+    overflow: hidden;
+
+
+
 }
 
-.orb {
 
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 1;
-  animation: float 5s ease-in-out infinite;
+.heroContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: radial-gradient(circle at 50% 100%,
+            rgba(111, 134, 255, 0.45) 0%,
+            rgba(111, 134, 255, 0.25) 20%,
+            rgba(126, 87, 194, 0.22) 40%,
+            rgba(111, 134, 255, 0.05) 55%,
+            transparent 70%);
+
+    filter: blur(30px);
+    opacity: 1;
 }
 
-.orb1 {
-  background: #3b82f6;
-  top: -100px;
-  left: -100px;
-}
-
-.orb2 {
-  background: #38bdf8;
-  bottom: -100px;
-  right: -100px;
-  animation-delay: -15s;
-}
 
 
 
@@ -72,7 +72,7 @@
 .introHeader {
     text-align: center;
     padding-top: 10px;
-    color: #B1D0ED;
+
     font-size: 28px;
     font-weight: 600;
 }
@@ -126,7 +126,7 @@
 }
 
 .headerH2 {
-    color: #B1D0ED;
+
     font-size: 28px;
     font-weight: 600;
 }

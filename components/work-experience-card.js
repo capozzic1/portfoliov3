@@ -19,7 +19,7 @@ export default function WorkExperienceCard(props) {
             </div>
         ) : (
             <Row className={styles.projectRow}>
-                    <Col xxxl={{ span: 2, offset: 5 }} lg={{ span: 3, offset: 5 }} md={{ span: 8, offset: 2 }} xs={{ span: 10, offset: 1 }} className={styles.projectContainer}>
+                    <Col xxxl={{ span: 4, offset: 4 }} lg={{ span: 3, offset: 5 }} md={{ span: 8, offset: 2 }} xs={{ span: 10, offset: 1 }} className={styles.projectContainer}>
                     <div className={styles.cardContent}>
                         {/* If items provided, render a simple grid for them (used for Work Experience) */}
                         {experience && experience.length > 0 ? (

@@ -9,17 +9,18 @@
 }
 
 .orb1 {
-  background: #38bdf8;
+  background: var(--color-glow-secondary);
   top: -100px;
   left: -100px;
 }
 
 .orb2 {
-  background: #38bdf8;
+  background: var(--color-glow-secondary);
   bottom: -100px;
   right: -100px;
   animation-delay: -15s;
 }
+
 
 @keyframes float {
   0% { transform: translateY(0px) translateX(0px); }
