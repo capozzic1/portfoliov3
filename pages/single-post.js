@@ -4,6 +4,7 @@ import styles from '../styles/blog.module.scss'
 import { Container, Row, Col, Spinner } from 'react-bootstrap'
 import { useRouter } from 'next/router'
 import { useQuery } from '@tanstack/react-query'
+import Orb from '../components/Orb'
 
 async function fetchPostById(id) {
   const res = await fetch(`api/posts/${id}`)
@@ -71,6 +72,7 @@ export default function SinglePost() {
           </Container>
         </main>
       </div>
+  
   </Row>  
   )
 }

@@ -23,11 +23,27 @@
 
 
 @keyframes float {
-  0% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(18px) translateX(8px); }
-  100% { transform: translateY(0px) translateX(0px); }
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(18px) translateX(8px);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
 }
 
 // :global(html[data-theme="light"]) .orb1 {
 //   filter: blur(120px);
 // }
+
+@media screen and (max-width: 500px) {
+  .orb {
+    width: 220px;
+    height: 220px;
+    filter: blur(70px);
+  }
+}
