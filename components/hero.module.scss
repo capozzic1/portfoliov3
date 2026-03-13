@@ -5,16 +5,18 @@
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
-    border-bottom: 2px solid var(--color-line-glow);
+    border-bottom: 2px solid var(--color-border);
 
     h1 {
         font-size: 28px;
+        color: var(--color-heading);
     }
 
     ul {    
         padding: 0px !important;
         font-style: italic;
         font-size: 2rem;
+        color: var(--color-text-soft);
     }
 
     /** animation */
@@ -28,7 +30,7 @@
 }
 
 
-.heroContainer::before {
+:global(html[data-theme="dark"]) .heroContainer::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -75,6 +77,7 @@
 
     font-size: 28px;
     font-weight: 600;
+    color: var(--color-heading);
 }
 
 .heroList {
@@ -129,4 +132,5 @@
 
     font-size: 28px;
     font-weight: 600;
+    color: var(--color-heading);
 }

@@ -1,0 +1,12 @@
+.themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: transform .2s ease, color .2s ease;
+}
+
+.themeToggle:hover {
+  transform: scale(1.15);
+}

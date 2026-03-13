@@ -149,7 +149,7 @@ export default function BlogTable() {
 		<Row>
 			<Col className="mt-4 mb-2">
 	
-			<Table variant='dark' striped bordered hover>
+			<Table striped bordered hover>
 				<thead>
 					<tr>
 						<th>Title</th>

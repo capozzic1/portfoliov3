@@ -26,12 +26,9 @@ export default function Blog() {
   const sortedPostsData = sortedPosts(posts)
   return (
     <>
-      <Row>
-        <div className={styles.page}>
-
-
+      <Row className={styles.page}>
+        <div >
           <main className={styles.main}>
-            <Container>
               <h1 className={styles.title}>Blog</h1>
 
               {sortedPostsData.map((post) => {
@@ -55,7 +52,6 @@ export default function Blog() {
                   </Link>
                 )
               })}
-            </Container>
           </main>
           <Orb variant={1} />
           <Orb variant={2} />

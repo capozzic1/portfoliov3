@@ -1,27 +1,24 @@
 .main {
-    background: #12173F;
     padding-top: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 0;
-    color: #B1D0ED;
 
     position: relative;
-    @import "./mixins";
-    @include gradient-drift(2s);
     overflow: hidden;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .recentTitle {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 0 #000;
+    color: var(--color-heading);
 }
 
 .olderTitle {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 0 #000;
+    color: var(--color-heading);
 }
 
 .mediaBox {
@@ -59,7 +56,8 @@
 
 .videoInner {
     position: relative;
-    padding-top: 56.25%; /* 16:9 */
+    padding-top: 56.25%;
+    /* 16:9 */
 }
 
 .fillFrame {
@@ -119,7 +117,7 @@
     }
 
     /* Make carousel media full-width inside the stacked layout */
-    .fillMedia { display: block; }
+    .fillMedia {
+        display: block;
+    }
 }
-
-

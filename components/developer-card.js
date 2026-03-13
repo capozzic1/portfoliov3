@@ -18,14 +18,14 @@ export default function DeveloperCard(props) {
                 <Col xl={{ span: 12, offset: 0 }} lg={{ span: 10, offset: 1 }}>
                     <Row className={styles.innerRow}>
                         {/* Left: Icon + title */}
-                        <Col xxxl={{ span: 2, offset: 2 }} xl={{ span: 2, offset: 1 }} lg={{ span: 3 }} md={{ span: 12 }} className={styles.iconCol}>
+                        <Col xxxl={{ span: 2, offset: 2 }} xl={{ span: 2, offset: 1 }} lg={{ span: 12 }} md={{ span: 12 }} className={styles.iconCol}>
                             <div className={styles.iconWrap}>
                                 <ImageHeader imgSrc={data.imgSrc} header={data.header} />
                             </div>
                         </Col>
 
                         {/* Middle: Description */}
-                        <Col xxxl={{span:4}} xl={{ span: 5 }} lg={{ span: 4 }} md={{ span: 6 }} className={styles.descCol}>
+                        <Col xxxl={{span:4}} xl={{ span: 5 }} lg={{ span: 12 }} md={{ span: 8 }} className={styles.descCol}>
                             <div className={styles.description}>
                                 <p >{data.description}</p>
                             </div>
@@ -38,7 +38,7 @@ export default function DeveloperCard(props) {
                         </Col>
 
                         {/* Right: Tools lists */}
-                        <Col xl={{ span: 4 }} lg={{ span: 5 }} md={{ span: 6 }} className={styles.toolsCol}>
+                        <Col xxxl={{ span: 3,offset:1 }} xl={{ span: 4,offset:0 }} lg={{ span: 6, offset: 3 }} md={{ span: 6 }} className={styles.toolsCol}>
                             <h2 className={styles.toolsIntro}>{data.toolDescription}</h2>
                             <div className={styles.toolsGrid}>
                                 <div className={styles.toolsSection}>

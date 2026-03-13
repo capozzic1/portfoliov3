@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Col, Row } from 'react-bootstrap'
 import styles from './footer.module.scss'
 import { FaGithub, FaLinkedin, FaStackExchange } from 'react-icons/fa'
+import Orb from './Orb'
 
 export default function Footer(props) {
     return (

@@ -1,45 +1,43 @@
 .page {
-  background: #0f1b30; /* dark navy similar to design */
-  color: #BAD5EE;
-  font-family: 'Roboto Mono', monospace;
-  min-height: 100vh; /* allow page to size to its content so footer sits directly after */
-  padding-bottom: 0;
 
-      @import "../styles/mixins";
-    @include gradient-drift(2s);
+  font-family: 'Roboto Mono', monospace;
+  min-height: 100vh;
+  /* allow page to size to its content so footer sits directly after */
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+
 }
 
 .singlePage {
-      background: #0f1b30; /* dark navy similar to design */
-  color: #BAD5EE;
+
   font-family: 'Roboto Mono', monospace;
-  min-height: auto; /* allow page to size to its content so footer sits directly after */
+  min-height: auto;
+  /* allow page to size to its content so footer sits directly after */
   padding-bottom: 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 
 
 .brand {
   font-size: 28px;
-  color: #0b2140;
 }
 
-.nav {
-  color: #0b2140;
-}
 
 .main {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
   padding-top: 30px;
-      padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .title {
   font-size: 48px;
   margin-bottom: 24px;
-  color: #BAD5EE;
+  color: var(--color-heading);
 }
 
 .post {
@@ -61,7 +59,8 @@
 .heroImage {
   position: relative;
   height: 320px;
-  margin: 0 auto 8px auto; /* reduced gap below image */
+  margin: 0 auto 8px auto;
+  /* reduced gap below image */
   border-radius: 2px;
   overflow: hidden;
 }
@@ -69,18 +68,21 @@
 .postTitle {
   font-size: 20px;
   margin: 12px 0 6px;
-  color: #BAD5EE;
+  color: var(--color-heading);
 }
+
 
 .date {
   display: block;
-  color: #BAD5EE;
   margin-top: 6px;
+  color: var(--color-heading);
+
 }
 
 /* Blog paragraph sizing */
 .page p,
-.post p, .singlePage p {
+.post p,
+.singlePage p {
   font-size: 1.4rem;
   line-height: 1.6;
 }
@@ -90,6 +92,7 @@
   .title {
     font-size: 40px;
   }
+
   .heroImage {
     height: 260px;
   }
@@ -100,22 +103,33 @@
     font-size: 32px;
     margin-top: 8px;
   }
+
   .postTitle {
     font-size: 18px;
   }
+
   .heroImage {
     height: 190px;
     margin-bottom: 6px;
   }
+
   .page p,
-  .post p, .singlePage p {
+  .post p,
+  .singlePage p {
     font-size: 1rem;
   }
+
   .main {
     padding-left: 8px;
     padding-right: 8px;
   }
+
   .post {
     padding: 0 12px;
   }
+}
+
+.postContent {
+  margin-top: 18px;
+  color: var(--color-text);
 }

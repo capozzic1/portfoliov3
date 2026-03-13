@@ -58,7 +58,7 @@ export default function SinglePost() {
                   <h2 className={styles.postTitle}>{post.title}</h2>
                   <time className={styles.date}>{pretty}</time>
 
-                  <div style={{ marginTop: 18, color: '#c9d9ee' }}>
+                  <div className={styles.postContent}>
                     {paragraphs.map((para, idx) => (
                       <p key={idx} style={{ marginBottom: '1rem' }}>
                         {para}

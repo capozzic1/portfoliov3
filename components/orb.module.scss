@@ -3,13 +3,13 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(90px);
   opacity: 1;
   animation: float 5s ease-in-out infinite;
 }
 
 .orb1 {
-  background: var(--color-glow-secondary);
+  background: var(--color-glow-primary);
   top: -100px;
   left: -100px;
 }
@@ -27,3 +27,7 @@
   50% { transform: translateY(18px) translateX(8px); }
   100% { transform: translateY(0px) translateX(0px); }
 }
+
+// :global(html[data-theme="light"]) .orb1 {
+//   filter: blur(120px);
+// }

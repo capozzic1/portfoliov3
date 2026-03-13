@@ -1,7 +1,7 @@
        @import "../styles/mixins";
 
        .dottedDivider {
-           border-top: 2px dashed var(--color-divider);
+           border-top: 1px solid var(--color-divider);
            width: 100%;
        }
 
@@ -39,7 +39,7 @@
        .container {
            margin-top: 15px;
            overflow: hidden;
-           border: 2px solid var(--color-line-glow);
+           border: 2px solid var(--color-border);
 
        }
 
@@ -110,6 +110,7 @@
            font-weight: 800;
 
            margin-bottom: 6px;
+          color: var(--color-heading);
        }
 
        .toolsSection ul {
@@ -122,6 +123,8 @@
            font-size: 1rem;
            opacity: 0.9;
            margin-bottom: 6px;
+          color: var(--color-text-soft);
+          font-weight: 600;
 
        }
 
@@ -190,11 +193,22 @@
            padding-top: 70px;
            position: relative;
 
-           p,
-           h2,
-           ul {
+          p,
+          h2,
+          ul {
                font-size: 1.25rem;
            }
+
+          /* Use theme-aware colors so light/dark adapt correctly */
+          h2 {
+              color: var(--color-heading);
+              font-weight: 700;
+          }
+
+          p,
+          ul {
+              color: var(--color-text);
+          }
        }
 
        @media screen and (max-width: 1023px) {
@@ -247,7 +261,7 @@
 
        @media screen and (max-width: 1440px) {
            .descCol {
-               grid-template-columns: 90%;
+               grid-template-columns: 75%;
            }
 
            .description {
@@ -256,13 +270,21 @@
 
        }
 
+       @media screen and (max-width: 500px) {
+           .descCol{
+               grid-template-columns: 1fr;
+           }
+       }
+
        //add the nth child selectors for toolsgrid
-         .toolsGrid div:nth-child(1) h6 {
-              color: var(--color-accent);
-         }
-        .toolsGrid div:nth-child(2) h6 {
-                color: var(--color-accent-2);
-        }
-        .toolsGrid div:nth-child(3) h6 {
-                color: var(--color-accent-3);
-            }
+       .toolsGrid div:nth-child(1) h6 {
+           color: var(--color-accent);
+       }
+
+       .toolsGrid div:nth-child(2) h6 {
+           color: var(--color-accent-2);
+       }
+
+       .toolsGrid div:nth-child(3) h6 {
+           color: var(--color-accent-3);
+       }

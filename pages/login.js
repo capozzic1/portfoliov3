@@ -4,6 +4,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/router'
 import styles from '../page-styles/login.module.scss'
 import useMe from '../utility/login-utility'
+import Orb from '../components/Orb'
 async function loginRequest({ username, password }) {
   const res = await fetch('/api/auth/login', {
     method: 'POST',
@@ -50,7 +51,7 @@ export default function Login() {
       <Row>
         <Col md={{ span: 6, offset: 3 }} lg={{ span: 4, offset: 4 }} className="mt-5">
       <Form onSubmit={handleSubmit}>
-        <h1>My Super Cool Login Page</h1>
+        <h1 className={styles.loginTitle}>My Super Cool Login Page</h1>
         <InputGroup  className="mb-3">
           <Form.Control
             placeholder="Username"
@@ -70,7 +71,7 @@ export default function Login() {
           />
         </InputGroup>
 
-        <Button type="submit" disabled={mutation.isLoading} className="mb-3">
+        <Button type="submit"  disabled={mutation.isLoading} className={styles.loginButton}>
           {mutation.isLoading ? 'Logging in…' : 'Login'}
         </Button>
 
@@ -84,6 +85,8 @@ export default function Login() {
       </Form>
       </Col>
       </Row>
+      <Orb variant={1} />
+      <Orb variant={2} />
        </div>
 
   )
