@@ -30,7 +30,7 @@ export default function WorkExperienceCard(props) {
                                         <div key={idx} className={styles.itemBox}>
                                             <div className={styles.itemCompany}>{it.company}</div>
                                             <div className={styles.itemTitle}>{it.position}</div>
-                                            <div className={styles.itemYears}>{it.years}</div>
+                                            <div className={styles.itemYears}>{it.startYear}-{it.endYear}</div>
                                         </div>
                                     ))}
                                 </div>
