@@ -32,7 +32,7 @@ export default function Projects( { projectPageContent }) {
                             <div className={styles.projectText}>
                                 <h3 className={styles.projectTitle}>Hospital management system</h3>
                                 <p className={styles.projectParagraph}>A full-stack healthcare management platform supporting patient records, scheduling, authentication, and role-based access.</p>
-                                <p>Tech stack: Java, Spring, Angular</p>
+                                <p>Tech stack: Java, Spring Boot, Angular, MySQL, MongoDB, AWS</p>
                             </div>
                         </div>
                     </Col>
