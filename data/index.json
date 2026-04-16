@@ -6,7 +6,7 @@
                     "header": "Hello, I'm Chris.",
                     "heroIcon": "/hero-code.png",
                     "heroList": [
-                        "User Interface Developer.",
+                        "Full Stack Developer.",
                         "Frontend-Driven, Backend-Capable.",
                         "AWS Certified."
                     ]
@@ -45,7 +45,7 @@
                             "name": "HTML"
                         }
                     ],
-                    "header": "User Interface Developer",
+                    "header": "Full Stack Developer",
                     "imgSrc": "/coding.png",
                     "description": "I take a design or prototype and make it become real in the browser using the languages of the web.",
                     "toolDescription": "Languages and tools I work with:",
