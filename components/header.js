@@ -5,11 +5,13 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import useMe from '../utility/login-utility'
 import { HiOutlineMenu } from "react-icons/hi";
 import ThemeToggle from './theme-switch'
+import { useContext } from 'react'
+import { AppThemeContext } from '../context/useTheme'
 
 export default function Header() {
       const { data: me, isLoading, isError } = useMe()
       const queryClient = useQueryClient()
-
+      const { toggleTheme } = useContext(AppThemeContext);
       const logoutMutation = useMutation({
           mutationFn: async () => {
               const res = await fetch('/api/auth/logout', {
@@ -48,7 +50,7 @@ export default function Header() {
                         <Link href="/blog" passHref>
                             <Nav.Link className={styles.projectsButton}>Blog</Nav.Link>
                         </Link>
-                        <Nav.Link href="#">
+                        <Nav.Link onClick={toggleTheme}>
                         <ThemeToggle />
                         </Nav.Link>
                         {me ? (
