@@ -33,8 +33,7 @@ export default function Blog() {
 
               {sortedPostsData.map((post) => {
                 return (
-                  <Link href={{ pathname: '/single-post', query: { id: post.id } }} key={post.id}>
-                    <a className={styles.postLink}>
+                  <Link className={styles.postLink} href={{ pathname: '/single-post', query: { id: post.id } }} key={post.id}>
                       <article className={styles.post}>
                         <Row className="align-items-center">
                           <Col xs={12}>
@@ -48,7 +47,6 @@ export default function Blog() {
                           </Col>
                         </Row>
                       </article>
-                    </a>
                   </Link>
                 )
               })}
