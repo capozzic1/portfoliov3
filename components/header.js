@@ -35,8 +35,8 @@ export default function Header() {
         <Navbar expand="lg" variant='dark' className={styles.navbar}>
             <Container>
                 <Navbar.Brand>
-                    <Link href="/">
-                        <a className={styles.homeButton}>Lucid Web Dream</a>
+                    <Link href="/" className={styles.homeButton}>
+                        Lucid Web Dream
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" >
@@ -44,12 +44,8 @@ export default function Header() {
                  </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Link href="/projects" passHref>
-                            <Nav.Link  className={styles.projectsButton}>Projects</Nav.Link>
-                        </Link>
-                        <Link href="/blog" passHref>
-                            <Nav.Link className={styles.projectsButton}>Blog</Nav.Link>
-                        </Link>
+                            <Nav.Link as={Link} href="/projects" className={styles.projectsButton}>Projects</Nav.Link>
+                            <Nav.Link  as={Link} href="/blog"className={styles.projectsButton}>Blog</Nav.Link>
                         <Nav.Link onClick={toggleTheme}>
                         <ThemeToggle />
                         </Nav.Link>

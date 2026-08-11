@@ -4,6 +4,7 @@ import ThemeProvider from 'react-bootstrap/ThemeProvider';
 import Layout from '../components/layout';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AppThemeProvider } from '../context/useTheme';
+import { Analytics } from '@vercel/analytics/next';
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }) {
             <ThemeProvider breakpoints={breakpoints}>
                 <Layout>
                 <Component {...pageProps} />
+                <Analytics />
                 </Layout>
             </ThemeProvider>
             </AppThemeProvider>

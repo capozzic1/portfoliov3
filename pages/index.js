@@ -1,9 +1,9 @@
 
-import Hero from '/components/hero'
+import Hero from '../components/hero'
 
-import ProjectCard from '/components/project-card';
-import WorkExperienceCard from '/components/work-experience-card';
-import DeveloperCard from '/components/developer-card';
+import ProjectCard from '../components/project-card';
+import WorkExperienceCard from '../components/work-experience-card';
+import DeveloperCard from '../components/developer-card';
 import indexData from '../data/index.json';
 import { Row } from 'react-bootstrap';
 

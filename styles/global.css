@@ -1,3 +1,6 @@
+/* Roboto Mono for headlines */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
 :root {
     --font-color-transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
@@ -166,8 +169,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Roboto Mono for headlines */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
 
 h1,
 h2,

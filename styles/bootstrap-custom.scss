@@ -19,4 +19,6 @@ $container-max-widths: (
 );
 
 // Import full Bootstrap after overrides
-@import "bootstrap/scss/bootstrap";
+// @import "bootstrap/scss/bootstrap";
+
+@import "../node_modules/bootstrap/scss/bootstrap"

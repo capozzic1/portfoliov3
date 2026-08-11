@@ -1,9 +1,9 @@
-import Carousel from "/components/carousel";
+import Carousel from "../components/carousel";
 import { Row, Col } from 'react-bootstrap';
 import projectsData from '../data/projects.json';
 import homeData from '../data/index.json';
 import styles from '../styles/projects.module.scss';
-import Orb from '/components/Orb';
+import Orb from '../components/Orb';
 export async function getStaticProps() {
     const projectPageContent = projectsData.projectPageContent;
 
